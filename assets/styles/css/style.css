@@ -1,6 +1,62 @@
+#header {
+  grid-area: header;
+  position: relative;
+  align-items: center;
+}
+#header #logo {
+  padding: 0 1rem;
+  line-height: 8vh;
+  background-image: linear-gradient(to right, #0984e3, #6c5ce7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav {
+  grid-area: nav;
+  position: relative;
+}
+#nav #navList {
+  display: flex;
+  justify-content: space-around;
+  line-height: 8vh;
+}
+#nav #navList .nav-items i {
+  background-image: linear-gradient(to right, #0984e3, #6c5ce7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#nav #navList .nav-items #navButton {
+  background-color: black;
+  border: #636e72;
+  background-image: linear-gradient(to right, #0984e3, #6c5ce7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#nav #navList .nav-items .nav-links-text {
+  display: none;
+}
+
+#main {
+  grid-area: main;
+  position: relative;
+}
+
+#footer {
+  grid-area: footer;
+  position: relative;
+}
+
 html {
   font-size: 62.5%;
-  background-color: #2d3436;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#container {
+  display: grid;
+  grid-template-areas: "header nav" "main main" "footer footer";
+  grid-template-rows: 8vh 84vh 8vh;
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=style.css.map */

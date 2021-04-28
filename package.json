@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "sass --watch assets/styles/scss:assets/styles/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.5",
     "sass": "^1.32.11"
   }
 }

@@ -1,0 +1,14 @@
+@use './variables.scss' as *;
+
+#header {
+  grid-area: header;
+  position: relative;
+  align-items: center;
+  #logo {
+    padding: 0 1rem;
+    line-height: 8vh;
+    background-image: linear-gradient(to right, $accent, $accent-off);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

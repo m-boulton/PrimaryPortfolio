@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+#nav {
+  grid-area: nav;
+  position: relative;
+  #navList {
+    display: flex;
+    justify-content: space-around;
+    line-height: 8vh;
+    .nav-items {
+      i {
+        background-image: linear-gradient(to right, $accent, $accent-off);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      #navButton {
+        background-color: black;
+        border: $dark-off;
+        background-image: linear-gradient(to right, $accent, $accent-off);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .nav-links-text {
+        display: none;
+      }
+    }
+  }
+}
