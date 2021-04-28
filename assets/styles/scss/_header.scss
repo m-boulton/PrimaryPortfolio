@@ -4,10 +4,11 @@
   grid-area: header;
   position: relative;
   align-items: center;
+  background-color: $dark;
   #logo {
     padding: 0 1rem;
     line-height: 8vh;
-    background-image: linear-gradient(to right, $accent, $accent-off);
+    background-image: radial-gradient($accent-light, $accent);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }

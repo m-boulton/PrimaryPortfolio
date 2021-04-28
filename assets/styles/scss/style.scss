@@ -9,8 +9,7 @@ html {
   display: grid;
   grid-template-areas:
     "header nav"
-    "main main"
-    "footer footer";
-  grid-template-rows: 8vh 84vh 8vh;
+    "main main";
+  grid-template-rows: 8vh 92vh;
   font-size: 3rem;
 }

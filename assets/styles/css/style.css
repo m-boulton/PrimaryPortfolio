@@ -2,11 +2,12 @@
   grid-area: header;
   position: relative;
   align-items: center;
+  background-color: #2d3436;
 }
 #header #logo {
   padding: 0 1rem;
   line-height: 8vh;
-  background-image: linear-gradient(to right, #0984e3, #6c5ce7);
+  background-image: radial-gradient(#74b9ff, #0984e3);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -14,6 +15,7 @@
 #nav {
   grid-area: nav;
   position: relative;
+  background-color: #2d3436;
 }
 #nav #navList {
   display: flex;
@@ -21,14 +23,14 @@
   line-height: 8vh;
 }
 #nav #navList .nav-items i {
-  background-image: linear-gradient(to right, #0984e3, #6c5ce7);
+  background-image: radial-gradient(#74b9ff, #0984e3);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 #nav #navList .nav-items #navButton {
   background-color: black;
   border: #636e72;
-  background-image: linear-gradient(to right, #0984e3, #6c5ce7);
+  background-image: radial-gradient(#74b9ff, #0984e3);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -36,14 +38,95 @@
   display: none;
 }
 
-#main {
+#main,
+#mainHome {
   grid-area: main;
   position: relative;
+}
+#main #background,
+#mainHome #background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+  background-image: url("../../img/server-room.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  filter: blur(1px);
+  filter: brightness(40%);
+}
+#main #overview,
+#mainHome #overview {
+  margin: 10rem 1.1rem;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#main #overview h2,
+#mainHome #overview h2 {
+  position: relative;
+  bottom: 1rem;
+  right: 1rem;
+  color: #6c5ce7;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+#main #overview p,
+#mainHome #overview p {
+  padding-top: 1rem;
+  color: #b2bec3;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+#main #workPanel,
+#mainHome #workPanel {
+  margin: 1.1rem;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+}
+#main #workPanel h2,
+#mainHome #workPanel h2 {
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
+  color: #6c5ce7;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+#main #workPanel p,
+#mainHome #workPanel p {
+  padding-top: 1rem;
+  color: #b2bec3;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+#main #workPanel p span,
+#mainHome #workPanel p span {
+  color: orangered;
+}
+#main #workButton,
+#mainHome #workButton {
+  position: relative;
+  left: 0.5rem;
+  bottom: 4rem;
+  width: max-content;
+  padding: 0.3rem;
+  background-color: #0984e3;
+  border-radius: 0.7rem;
+}
+#main #workButton h4,
+#mainHome #workButton h4 {
+  padding: 0.5rem;
+  color: #b2bec3;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 #footer {
   grid-area: footer;
   position: relative;
+  display: none;
 }
 
 html {
@@ -54,8 +137,8 @@ html {
 
 #container {
   display: grid;
-  grid-template-areas: "header nav" "main main" "footer footer";
-  grid-template-rows: 8vh 84vh 8vh;
+  grid-template-areas: "header nav" "main main";
+  grid-template-rows: 8vh 92vh;
   font-size: 3rem;
 }
 
