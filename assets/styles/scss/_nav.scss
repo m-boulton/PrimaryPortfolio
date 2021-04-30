@@ -3,16 +3,28 @@
 #nav {
   grid-area: nav;
   position: relative;
-  background-color: $dark;
+  background-color: black;
   #navList {
     display: flex;
     justify-content: space-around;
     line-height: 8vh;
     .nav-items {
+      width: 100%;
+      text-align: center;
+      transition: ease-in-out 0.6s;
+      &:hover {
+        background: $accent;
+      }
       i {
         background-image: radial-gradient($accent-light, $accent);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        @include tablet {
+          display: none;
+        }
+        @include desktop {
+          display: none;
+        }
       }
       #navButton {
         background-color: black;
@@ -22,7 +34,19 @@
         -webkit-text-fill-color: transparent;
       }
       .nav-links-text {
+        font-size: 2rem;
+        color: $accent;
         display: none;
+        transition: ease-in-out 0.6s;
+        &:hover {
+          color: $light;
+        }
+        @include tablet {
+          display: block;
+        }
+        @include desktop {
+          display: block;
+        }
       }
     }
   }

@@ -1,5 +1,26 @@
+@use './variables' as *;
+
 #footer {
   grid-area: footer;
-  position: relative;
-  display: none;
+  position: sticky;
+  bottom: 0;
+  #socialMediaLinks {
+    display: flex;
+    height: 100%;
+    align-content: space-around;
+    li {
+      margin: 0 auto;
+      a {
+        padding: 0.4rem 0.4rem;
+        line-height: 6vh;
+        i {
+          color: $accent;
+          transition: ease-in-out 0.3s;
+          &:hover {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,4 +1,5 @@
 @use './index' as *;
+@use './variables' as *;
 
 html {
   font-size: 62.5%;
@@ -9,7 +10,14 @@ html {
   display: grid;
   grid-template-areas:
     "header nav"
-    "main main";
-  grid-template-rows: 8vh 92vh;
+    "main main"
+    "footer footer";
+  grid-template-rows: 8vh 86vh 6vh;
   font-size: 3rem;
+  @include desktop {
+    grid-template-areas:
+      "header nav"
+      "main main"
+      "footer main";
+  }
 }

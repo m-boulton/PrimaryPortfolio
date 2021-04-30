@@ -2,7 +2,7 @@
   grid-area: header;
   position: relative;
   align-items: center;
-  background-color: #2d3436;
+  background-color: black;
 }
 #header #logo {
   padding: 0 1rem;
@@ -15,17 +15,35 @@
 #nav {
   grid-area: nav;
   position: relative;
-  background-color: #2d3436;
+  background-color: black;
 }
 #nav #navList {
   display: flex;
   justify-content: space-around;
   line-height: 8vh;
 }
+#nav #navList .nav-items {
+  width: 100%;
+  text-align: center;
+  transition: ease-in-out 0.6s;
+}
+#nav #navList .nav-items:hover {
+  background: #0984e3;
+}
 #nav #navList .nav-items i {
   background-image: radial-gradient(#74b9ff, #0984e3);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #nav #navList .nav-items i {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  #nav #navList .nav-items i {
+    display: none;
+  }
 }
 #nav #navList .nav-items #navButton {
   background-color: black;
@@ -35,7 +53,23 @@
   -webkit-text-fill-color: transparent;
 }
 #nav #navList .nav-items .nav-links-text {
+  font-size: 2rem;
+  color: #0984e3;
   display: none;
+  transition: ease-in-out 0.6s;
+}
+#nav #navList .nav-items .nav-links-text:hover {
+  color: #b2bec3;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #nav #navList .nav-items .nav-links-text {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  #nav #navList .nav-items .nav-links-text {
+    display: block;
+  }
 }
 
 #main,
@@ -67,14 +101,14 @@
   position: relative;
   bottom: 1rem;
   right: 1rem;
-  color: #6c5ce7;
+  color: #b2bec3;
   font-size: 2.5rem;
   font-weight: 700;
 }
 #main #overview p,
 #mainHome #overview p {
   padding-top: 1rem;
-  color: #b2bec3;
+  color: #636e72;
   font-size: 1.8rem;
   line-height: 2.2rem;
 }
@@ -90,14 +124,14 @@
   position: relative;
   bottom: 1rem;
   left: 1rem;
-  color: #6c5ce7;
+  color: #b2bec3;
   font-size: 2.5rem;
   font-weight: 600;
 }
 #main #workPanel p,
 #mainHome #workPanel p {
   padding-top: 1rem;
-  color: #b2bec3;
+  color: #636e72;
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -114,19 +148,50 @@
   padding: 0.3rem;
   background-color: #0984e3;
   border-radius: 0.7rem;
+  transition: ease-in-out 0.6s;
+}
+#main #workButton:hover,
+#mainHome #workButton:hover {
+  background-color: #b2bec3;
 }
 #main #workButton h4,
 #mainHome #workButton h4 {
   padding: 0.5rem;
-  color: #b2bec3;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
+}
+#main #workButton h4 a,
+#mainHome #workButton h4 a {
+  color: #b2bec3;
+}
+#main #workButton h4 a:hover,
+#mainHome #workButton h4 a:hover {
+  color: #0984e3;
 }
 
 #footer {
   grid-area: footer;
-  position: relative;
-  display: none;
+  position: sticky;
+  bottom: 0;
+}
+#footer #socialMediaLinks {
+  display: flex;
+  height: 100%;
+  align-content: space-around;
+}
+#footer #socialMediaLinks li {
+  margin: 0 auto;
+}
+#footer #socialMediaLinks li a {
+  padding: 0.4rem 0.4rem;
+  line-height: 6vh;
+}
+#footer #socialMediaLinks li a i {
+  color: #0984e3;
+  transition: ease-in-out 0.3s;
+}
+#footer #socialMediaLinks li a i:hover {
+  color: #b2bec3;
 }
 
 html {
@@ -137,9 +202,14 @@ html {
 
 #container {
   display: grid;
-  grid-template-areas: "header nav" "main main";
-  grid-template-rows: 8vh 92vh;
+  grid-template-areas: "header nav" "main main" "footer footer";
+  grid-template-rows: 8vh 86vh 6vh;
   font-size: 3rem;
+}
+@media (min-width: 1024px) {
+  #container {
+    grid-template-areas: "header nav" "main main" "footer main";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
