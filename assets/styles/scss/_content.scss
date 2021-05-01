@@ -1,84 +1,138 @@
 @use './variables' as *;
 
-#main,
 #mainHome {
   grid-area: main;
   position: relative;
-  #background {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -10;
-    background-image: url("../../img/server-room.jpg");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    filter: blur(1px);
-    filter: brightness(40%);
-  }
-  #overview {
-    margin: 10rem 1.1rem;
-    padding: 0.8rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    h2 {
-      position: relative;
-      bottom: 1rem;
-      right: 1rem;
-      color: $light;
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-    p {
-      padding-top: 1rem;
-      color: $dark-off;
-      font-size: 1.8rem;
-      line-height: 2.2rem;
-    }
-  }
-  #workPanel {
-    margin: 1.1rem;
-    padding: 0.8rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    text-align: right;
-    h2 {
-      position: relative;
-      bottom: 1rem;
-      left: 1rem;
-      color: $light;
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
-    p {
-      padding-top: 1rem;
-      color: $dark-off;
-      font-size: 1.4rem;
-      line-height: 2rem;
-      span {
-        color: orangered;
+  #contentContainer {
+    margin: 1rem 2rem;
+    #overview {
+      padding: 0.8em;
+      background-color: rgba(0, 0, 0, 0.6);
+      @include desktop {
+        display: flex;
+      }
+      h2 {
+        position: relative;
+        bottom: 1rem;
+        right: 1rem;
+        color: $accent-light;
+        font-size: 2rem;
+        font-weight: 700;
+        @include tablet {
+          font-size: 2.5rem;
+        }
+        @include desktop {
+          font-size: 3rem;
+          font-weight: 800;
+        }
+      }
+      p {
+        color: $light;
+        font-size: 1.6rem;
+        line-height: 1.2em;
+        @include tablet {
+          font-size: 2rem;
+        }
+        @include desktop {
+          font-size: 2.5rem;
+        }
       }
     }
-  }
-  #workButton {
-    position: relative;
-    left: 0.5rem;
-    bottom: 4rem;
-    width: max-content;
-    padding: 0.3rem;
-    background-color: $accent;
-    border-radius: 0.7rem;
-    transition: ease-in-out 0.6s;
-    &:hover {
-      background-color: $light;
+    #workPanel {
+      text-align: right;
+      #workCards {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        .work-card {
+          margin-top: 0.5em;
+          padding: 0.5em;
+          background-color: rgba(0, 0, 0, 0.6);
+          text-align: left;
+          @include mobile {
+            width: 100%;
+          }
+          @include tablet {
+            flex: 1 0 48%;
+            margin: 1%;
+          }
+          @include desktop {
+            flex: 1 0 31%;
+            margin: 1%;
+          }
+          h3 {
+            color: $light;
+            border-bottom: 0.1em solid $accent;
+            font-size: 1.6rem;
+            line-height: 1.2em;
+            @include tablet {
+              font-size: 2.2rem;
+            }
+            @include desktop {
+              font-size: 2.7rem;
+            }
+          }
+          p {
+            color: $light;
+            margin-top: 0.2em;
+            font-size: 1.4rem;
+            line-height: 1.2em;
+            @include tablet {
+              font-size: 2rem;
+            }
+            @include desktop {
+              font-size: 2.5rem;
+            }
+          }
+          ul {
+            padding-top: 1rem;
+            text-align: right;
+            font-size: 1.4rem;
+            line-height: 1.2em;
+            li {
+              font-size: inherit;
+              line-height: inherit;
+              a {
+                font-size: inherit;
+                line-height: inherit;
+                color: $accent;
+                @include tablet {
+                  font-size: 2rem;
+                  line-height: 1.2em;
+                }
+                @include desktop {
+                  font-size: 2.5rem;
+                  line-height: 1.2em;
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    // box-shadow: 16px 16px 32px #04365d, -16px -16px 32px #0ed2ff;
-    h4 {
-      padding: 0.5rem;
-      font-size: 2rem;
-      font-weight: 700;
-      a {
-        color: $light;
-        &:hover {
-          color: $accent;
+
+    #workButton {
+      position: relative;
+      left: 0.5rem;
+      bottom: 4rem;
+      width: max-content;
+      padding: 0.3rem;
+      background-color: $accent;
+      border-radius: 0.7rem;
+      transition: ease-in-out 0.6s;
+      &:hover {
+        background-color: $light;
+      }
+      // box-shadow: 16px 16px 32px #04365d, -16px -16px 32px #0ed2ff;
+      h4 {
+        padding: 0.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        a {
+          color: $light;
+          &:hover {
+            color: $accent;
+          }
         }
       }
     }

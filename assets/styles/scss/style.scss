@@ -8,16 +8,33 @@ html {
 }
 #container {
   display: grid;
+  width: 100%;
+  height: auto;
+  font-size: 3rem;
   grid-template-areas:
     "header nav"
     "main main"
     "footer footer";
-  grid-template-rows: 8vh 86vh 6vh;
-  font-size: 3rem;
+  grid-template-rows: (calc(var(--vh, 1vh) * 8)) (calc(var(--vh, 1vh) * 86)) (
+      calc(var(--vh, 1vh) * 6)
+    );
   @include desktop {
     grid-template-areas:
       "header nav"
       "main main"
-      "footer main";
+      "main main";
+  }
+  #background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../../img/server-room.jpg");
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(1px);
+    filter: brightness(80%);
+    z-index: -10;
   }
 }

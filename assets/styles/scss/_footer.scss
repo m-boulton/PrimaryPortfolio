@@ -1,24 +1,49 @@
 @use './variables' as *;
 
 #footer {
-  grid-area: footer;
   position: sticky;
   bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include mobile {
+    grid-area: footer;
+  }
+  //
+  @include desktop {
+    position: fixed;
+    display: block;
+    width: 8rem;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
   #socialMediaLinks {
     display: flex;
     height: 100%;
     align-content: space-around;
+    @include desktop {
+      display: block;
+      // border-top: 0.8rem solid $dark-off;
+      // border-right: 0.8rem solid $dark-off;
+      // border-top-right-radius: 1rem;
+    }
     li {
       margin: 0 auto;
+      transition: ease-in-out 0.3s;
+      color: $accent;
+      &:hover {
+        background-color: $accent;
+        color: $light;
+      }
       a {
         padding: 0.4rem 0.4rem;
         line-height: 6vh;
+        text-align: center;
+        color: inherit;
+        @include desktop {
+          display: block;
+          width: 100%;
+        }
         i {
-          color: $accent;
-          transition: ease-in-out 0.3s;
-          &:hover {
-            color: $light;
-          }
+          color: inherit;
         }
       }
     }

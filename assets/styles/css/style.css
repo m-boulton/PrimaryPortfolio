@@ -64,83 +64,157 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   #nav #navList .nav-items .nav-links-text {
     display: block;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 1024px) {
   #nav #navList .nav-items .nav-links-text {
     display: block;
+    font-size: 4rem;
   }
 }
 
-#main,
 #mainHome {
   grid-area: main;
   position: relative;
 }
-#main #background,
-#mainHome #background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: -10;
-  background-image: url("../../img/server-room.jpg");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  filter: blur(1px);
-  filter: brightness(40%);
+#mainHome #contentContainer {
+  margin: 1rem 2rem;
 }
-#main #overview,
-#mainHome #overview {
-  margin: 10rem 1.1rem;
-  padding: 0.8rem;
+#mainHome #contentContainer #overview {
+  padding: 0.8em;
   background-color: rgba(0, 0, 0, 0.6);
 }
-#main #overview h2,
-#mainHome #overview h2 {
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #overview {
+    display: flex;
+  }
+}
+#mainHome #contentContainer #overview h2 {
   position: relative;
   bottom: 1rem;
   right: 1rem;
-  color: #b2bec3;
-  font-size: 2.5rem;
+  color: #74b9ff;
+  font-size: 2rem;
   font-weight: 700;
 }
-#main #overview p,
-#mainHome #overview p {
-  padding-top: 1rem;
-  color: #636e72;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainHome #contentContainer #overview h2 {
+    font-size: 2.5rem;
+  }
 }
-#main #workPanel,
-#mainHome #workPanel {
-  margin: 1.1rem;
-  padding: 0.8rem;
-  background-color: rgba(0, 0, 0, 0.6);
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #overview h2 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}
+#mainHome #contentContainer #overview p {
+  color: #b2bec3;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainHome #contentContainer #overview p {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #overview p {
+    font-size: 2.5rem;
+  }
+}
+#mainHome #contentContainer #workPanel {
   text-align: right;
 }
-#main #workPanel h2,
-#mainHome #workPanel h2 {
-  position: relative;
-  bottom: 1rem;
-  left: 1rem;
+#mainHome #contentContainer #workPanel #workCards {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+@media (max-width: 768px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card {
+    flex: 1 0 48%;
+    margin: 1%;
+  }
+}
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card {
+    flex: 1 0 31%;
+    margin: 1%;
+  }
+}
+#mainHome #contentContainer #workPanel #workCards .work-card h3 {
   color: #b2bec3;
-  font-size: 2.5rem;
-  font-weight: 600;
+  border-bottom: 0.1em solid #0984e3;
+  font-size: 1.6rem;
+  line-height: 1.2em;
 }
-#main #workPanel p,
-#mainHome #workPanel p {
-  padding-top: 1rem;
-  color: #636e72;
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card h3 {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card h3 {
+    font-size: 2.7rem;
+  }
+}
+#mainHome #contentContainer #workPanel #workCards .work-card p {
+  color: #b2bec3;
+  margin-top: 0.2em;
   font-size: 1.4rem;
-  line-height: 2rem;
+  line-height: 1.2em;
 }
-#main #workPanel p span,
-#mainHome #workPanel p span {
-  color: orangered;
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card p {
+    font-size: 2rem;
+  }
 }
-#main #workButton,
-#mainHome #workButton {
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card p {
+    font-size: 2.5rem;
+  }
+}
+#mainHome #contentContainer #workPanel #workCards .work-card ul {
+  padding-top: 1rem;
+  text-align: right;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card ul li {
+  font-size: inherit;
+  line-height: inherit;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card ul li a {
+  font-size: inherit;
+  line-height: inherit;
+  color: #0984e3;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card ul li a {
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 1024px) {
+  #mainHome #contentContainer #workPanel #workCards .work-card ul li a {
+    font-size: 2.5rem;
+    line-height: 1.2em;
+  }
+}
+#mainHome #contentContainer #workButton {
   position: relative;
   left: 0.5rem;
   bottom: 4rem;
@@ -150,48 +224,73 @@
   border-radius: 0.7rem;
   transition: ease-in-out 0.6s;
 }
-#main #workButton:hover,
-#mainHome #workButton:hover {
+#mainHome #contentContainer #workButton:hover {
   background-color: #b2bec3;
 }
-#main #workButton h4,
-#mainHome #workButton h4 {
+#mainHome #contentContainer #workButton h4 {
   padding: 0.5rem;
   font-size: 2rem;
   font-weight: 700;
 }
-#main #workButton h4 a,
-#mainHome #workButton h4 a {
+#mainHome #contentContainer #workButton h4 a {
   color: #b2bec3;
 }
-#main #workButton h4 a:hover,
-#mainHome #workButton h4 a:hover {
+#mainHome #contentContainer #workButton h4 a:hover {
   color: #0984e3;
 }
 
 #footer {
-  grid-area: footer;
   position: sticky;
   bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  #footer {
+    grid-area: footer;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    position: fixed;
+    display: block;
+    width: 8rem;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 #footer #socialMediaLinks {
   display: flex;
   height: 100%;
   align-content: space-around;
 }
+@media (min-width: 1024px) {
+  #footer #socialMediaLinks {
+    display: block;
+  }
+}
 #footer #socialMediaLinks li {
   margin: 0 auto;
+  transition: ease-in-out 0.3s;
+  color: #0984e3;
+}
+#footer #socialMediaLinks li:hover {
+  background-color: #0984e3;
+  color: #b2bec3;
 }
 #footer #socialMediaLinks li a {
   padding: 0.4rem 0.4rem;
   line-height: 6vh;
+  text-align: center;
+  color: inherit;
+}
+@media (min-width: 1024px) {
+  #footer #socialMediaLinks li a {
+    display: block;
+    width: 100%;
+  }
 }
 #footer #socialMediaLinks li a i {
-  color: #0984e3;
-  transition: ease-in-out 0.3s;
-}
-#footer #socialMediaLinks li a i:hover {
-  color: #b2bec3;
+  color: inherit;
 }
 
 html {
@@ -202,14 +301,29 @@ html {
 
 #container {
   display: grid;
-  grid-template-areas: "header nav" "main main" "footer footer";
-  grid-template-rows: 8vh 86vh 6vh;
+  width: 100%;
+  height: auto;
   font-size: 3rem;
+  grid-template-areas: "header nav" "main main" "footer footer";
+  grid-template-rows: calc(var(--vh, 1vh) * 8) calc(var(--vh, 1vh) * 86) calc(var(--vh, 1vh) * 6);
 }
 @media (min-width: 1024px) {
   #container {
-    grid-template-areas: "header nav" "main main" "footer main";
+    grid-template-areas: "header nav" "main main" "main main";
   }
+}
+#container #background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("../../img/server-room.jpg");
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  filter: brightness(80%);
+  z-index: -10;
 }
 
 /*# sourceMappingURL=style.css.map */
