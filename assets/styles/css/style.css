@@ -1,10 +1,14 @@
 #header {
-  grid-area: header;
-  position: relative;
+  display: inline-flex;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
   align-items: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #header #logo {
+  width: 25%;
   padding: 0 1rem;
   line-height: 8vh;
   background-image: radial-gradient(#74b9ff, #0984e3);
@@ -12,82 +16,77 @@
   -webkit-text-fill-color: transparent;
 }
 
-#nav {
-  grid-area: nav;
-  position: relative;
-  background-color: black;
-}
-#nav #navList {
+#navList {
   display: flex;
+  width: 75%;
   justify-content: space-around;
   line-height: 8vh;
 }
-#nav #navList .nav-items {
+#navList .nav-items {
   width: 100%;
   text-align: center;
-  transition: ease-in-out 0.6s;
+  transition: ease-in-out 0.4s;
 }
-#nav #navList .nav-items:hover {
+#navList .nav-items:hover {
   background: #0984e3;
 }
-#nav #navList .nav-items i {
+#navList .nav-items i {
   background-image: radial-gradient(#74b9ff, #0984e3);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #nav #navList .nav-items i {
+  #navList .nav-items i {
     display: none;
   }
 }
 @media (min-width: 1024px) {
-  #nav #navList .nav-items i {
+  #navList .nav-items i {
     display: none;
   }
 }
-#nav #navList .nav-items #navButton {
-  background-color: black;
-  border: #636e72;
-  background-image: radial-gradient(#74b9ff, #0984e3);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-#nav #navList .nav-items .nav-links-text {
+#navList .nav-items .nav-links-text {
   font-size: 2rem;
   color: #0984e3;
   display: none;
   transition: ease-in-out 0.6s;
 }
-#nav #navList .nav-items .nav-links-text:hover {
+#navList .nav-items .nav-links-text:hover {
   color: #b2bec3;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #nav #navList .nav-items .nav-links-text {
+  #navList .nav-items .nav-links-text {
     display: block;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #nav #navList .nav-items .nav-links-text {
+  #navList .nav-items .nav-links-text {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 #mainHome {
-  grid-area: main;
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0 auto;
 }
 #mainHome #contentContainer {
   margin: 1rem 2rem;
+  max-width: 1400px;
 }
 #mainHome #contentContainer #overview {
   padding: 0.8em;
+  max-width: 800px;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #overview {
     display: flex;
+    margin: 1em auto;
   }
 }
 #mainHome #contentContainer #overview h2 {
@@ -96,7 +95,7 @@
   right: 1rem;
   color: #74b9ff;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #mainHome #contentContainer #overview h2 {
@@ -105,8 +104,8 @@
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #overview h2 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.7rem;
+    font-weight: 700;
   }
 }
 #mainHome #contentContainer #overview p {
@@ -121,7 +120,7 @@
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #overview p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
 #mainHome #contentContainer #workPanel {
@@ -133,10 +132,18 @@
   flex-flow: wrap;
 }
 #mainHome #contentContainer #workPanel #workCards .work-card {
-  margin-top: 0.5em;
+  margin: 0.5em;
   padding: 0.5em;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: left;
+  transition: ease-in-out 0.2s;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card:hover {
+  margin: 0.4em;
+  padding: 0.6em;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card:hover h3 {
+  border-bottom: 0.2em solid #74b9ff;
 }
 @media (max-width: 768px) {
   #mainHome #contentContainer #workPanel #workCards .work-card {
@@ -145,13 +152,13 @@
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #mainHome #contentContainer #workPanel #workCards .work-card {
-    flex: 1 0 48%;
+    flex: 1 0 30%;
     margin: 1%;
   }
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #workPanel #workCards .work-card {
-    flex: 1 0 31%;
+    flex: 1 0 20%;
     margin: 1%;
   }
 }
@@ -160,6 +167,7 @@
   border-bottom: 0.1em solid #0984e3;
   font-size: 1.6rem;
   line-height: 1.2em;
+  transition: ease-in-out 0.2s;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #mainHome #contentContainer #workPanel #workCards .work-card h3 {
@@ -168,7 +176,7 @@
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #workPanel #workCards .work-card h3 {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
 }
 #mainHome #contentContainer #workPanel #workCards .work-card p {
@@ -184,7 +192,7 @@
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #workPanel #workCards .work-card p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 #mainHome #contentContainer #workPanel #workCards .work-card ul {
@@ -210,57 +218,53 @@
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #workPanel #workCards .work-card ul li a {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1.2em;
   }
 }
-#mainHome #contentContainer #workButton {
+#mainHome #contentContainer #workPanel #workCards .work-card #workButton {
   position: relative;
   left: 0.5rem;
   bottom: 4rem;
-  width: max-content;
-  padding: 0.3rem;
+  padding: 0.3em;
   background-color: #0984e3;
-  border-radius: 0.7rem;
-  transition: ease-in-out 0.6s;
-}
-#mainHome #contentContainer #workButton:hover {
-  background-color: #b2bec3;
-}
-#mainHome #contentContainer #workButton h4 {
-  padding: 0.5rem;
-  font-size: 2rem;
-  font-weight: 700;
-}
-#mainHome #contentContainer #workButton h4 a {
+  border-radius: 0.7em;
+  transition: ease-in-out 0.3s;
   color: #b2bec3;
 }
-#mainHome #contentContainer #workButton h4 a:hover {
+#mainHome #contentContainer #workPanel #workCards .work-card #workButton:hover {
+  background-color: #b2bec3;
   color: #0984e3;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card #workButton h4 {
+  padding: 0.2em;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: inherit;
+}
+#mainHome #contentContainer #workPanel #workCards .work-card #workButton h4 a {
+  color: inherit;
 }
 
 #footer {
-  position: sticky;
+  display: block;
+  position: fixed;
+  width: 100%;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
-}
-@media (max-width: 768px) {
-  #footer {
-    grid-area: footer;
-  }
 }
 @media (min-width: 1024px) {
   #footer {
     position: fixed;
     display: block;
-    width: 8rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 6rem;
   }
 }
 #footer #socialMediaLinks {
   display: flex;
   height: 100%;
+  width: 100%;
   align-content: space-around;
 }
 @media (min-width: 1024px) {
@@ -278,7 +282,6 @@
   color: #b2bec3;
 }
 #footer #socialMediaLinks li a {
-  padding: 0.4rem 0.4rem;
   line-height: 6vh;
   text-align: center;
   color: inherit;
@@ -299,18 +302,16 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#container {
-  display: grid;
-  width: 100%;
-  height: auto;
-  font-size: 3rem;
-  grid-template-areas: "header nav" "main main" "footer footer";
-  grid-template-rows: calc(var(--vh, 1vh) * 8) calc(var(--vh, 1vh) * 86) calc(var(--vh, 1vh) * 6);
+body {
+  height: calc(var(--vh, 1vh) * 100);
 }
-@media (min-width: 1024px) {
-  #container {
-    grid-template-areas: "header nav" "main main" "main main";
-  }
+
+#container {
+  width: 100%;
+  min-height: calc(100% - 5rem);
+  font-size: 3rem;
+  position: absolute;
+  padding-bottom: 5rem;
 }
 #container #background {
   height: 100%;

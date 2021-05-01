@@ -1,29 +1,25 @@
 @use './variables' as *;
 
 #footer {
-  position: sticky;
+  display: block;
+  position: fixed;
+  width: 100%;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  @include mobile {
-    grid-area: footer;
-  }
   //
   @include desktop {
     position: fixed;
     display: block;
-    width: 8rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 6rem;
   }
   #socialMediaLinks {
     display: flex;
     height: 100%;
+    width: 100%;
     align-content: space-around;
     @include desktop {
       display: block;
-      // border-top: 0.8rem solid $dark-off;
-      // border-right: 0.8rem solid $dark-off;
-      // border-top-right-radius: 1rem;
     }
     li {
       margin: 0 auto;
@@ -34,7 +30,6 @@
         color: $light;
       }
       a {
-        padding: 0.4rem 0.4rem;
         line-height: 6vh;
         text-align: center;
         color: inherit;

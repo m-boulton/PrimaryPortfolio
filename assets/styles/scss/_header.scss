@@ -1,11 +1,15 @@
 @use './variables.scss' as *;
 
 #header {
-  grid-area: header;
-  position: relative;
+  display: inline-flex;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
   align-items: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   #logo {
+    width: 25%;
     padding: 0 1rem;
     line-height: 8vh;
     background-image: radial-gradient($accent-light, $accent);
