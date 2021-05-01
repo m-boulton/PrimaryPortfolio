@@ -12,15 +12,12 @@
   padding: 0 1rem;
   line-height: 8vh;
   color: #0984e3;
+  font-size: 3.5rem;
   transition: ease-in-out 0.3s;
 }
 #header #logo:hover {
   color: #74b9ff;
   text-shadow: 2px 2px 6px #74b9ff;
-}
-#header #logo:hover span {
-  transition: ease-in-out 0.3s;
-  text-shadow: 1px 1px 4px #74b9ff;
 }
 #header #logo span {
   color: #0984e3;
@@ -40,38 +37,51 @@
 #navList .nav-items:hover {
   background: #0984e3;
 }
-#navList .nav-items i {
-  background-image: radial-gradient(#74b9ff, #0984e3);
+@media (max-width: 768px) {
+  #navList .nav-items a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(#74b9ff, #0984e3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #navList .nav-items a:hover {
+    background-image: radial-gradient(#b2bec3, #74b9ff);
+  }
+}
+#navList .nav-items a i {
+  background-image: inherit;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #navList .nav-items i {
+  #navList .nav-items a i {
     display: none;
   }
 }
 @media (min-width: 1024px) {
-  #navList .nav-items i {
+  #navList .nav-items a i {
     display: none;
   }
 }
-#navList .nav-items .nav-links-text {
+#navList .nav-items a .nav-links-text {
   font-size: 2rem;
   color: #0984e3;
   display: none;
   transition: ease-in-out 0.6s;
 }
-#navList .nav-items .nav-links-text:hover {
+#navList .nav-items a .nav-links-text:hover {
   color: #b2bec3;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #navList .nav-items .nav-links-text {
+  #navList .nav-items a .nav-links-text {
     display: block;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #navList .nav-items .nav-links-text {
+  #navList .nav-items a .nav-links-text {
     display: block;
     font-size: 3rem;
   }
@@ -276,7 +286,7 @@
   display: flex;
   height: 100%;
   width: 100%;
-  align-content: space-around;
+  justify-content: space-around;
 }
 @media (min-width: 1024px) {
   #footer #socialMediaLinks {
@@ -284,7 +294,8 @@
   }
 }
 #footer #socialMediaLinks li {
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   transition: ease-in-out 0.3s;
   color: #0984e3;
 }
@@ -293,6 +304,9 @@
   color: #b2bec3;
 }
 #footer #socialMediaLinks li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   line-height: 6vh;
   text-align: center;
   color: inherit;
