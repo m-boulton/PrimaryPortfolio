@@ -214,6 +214,7 @@
   font-size: 1.6rem;
   line-height: 1.2em;
   transition: ease-in-out 0.2s;
+  font-weight: 600;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #mainHome #contentContainer #workPanel #workCards .work-card h3 {
@@ -223,6 +224,7 @@
 @media (min-width: 1024px) {
   #mainHome #contentContainer #workPanel #workCards .work-card h3 {
     font-size: 2.4rem;
+    font-weight: 700;
   }
 }
 #mainHome #contentContainer #workPanel #workCards .work-card p {
@@ -294,6 +296,21 @@
 }
 #mainHome #contentContainer #workPanel #workCards .work-card #workButton h4 a {
   color: inherit;
+}
+#mainHome #contentContainer #contactForm {
+  height: 76vh;
+  width: 86vw;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#mainHome #contentContainer #contactForm #textInputArea textarea {
+  border: none;
+  border-top: 2px solid #0984e3;
+  background-image: none;
+  background-color: transparent;
 }
 
 #footer {
