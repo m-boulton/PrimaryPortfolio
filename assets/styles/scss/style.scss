@@ -23,7 +23,8 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(1px) brightness(80%);
+    filter: brightness(0%);
+    transition: ease-in 3s;
     z-index: -10;
   }
 }
