@@ -15,6 +15,10 @@
     color: $accent;
     font-size: 3.5rem;
     transition: ease-in-out 0.3s;
+    @include mobile {
+      font-size: 7vw;
+      line-height: 7vw;
+    }
     &:hover {
       color: $accent-light;
       text-shadow: 2px 2px 6px $accent-light;

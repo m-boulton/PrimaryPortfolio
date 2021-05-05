@@ -18,7 +18,7 @@
         height: 100%;
         width: 100%;
         background-image: radial-gradient($accent-light, $accent);
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         &:hover {
           background-image: radial-gradient($light, $accent-light);
@@ -26,7 +26,7 @@
       }
       i {
         background-image: inherit;
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @include tablet {
           display: none;
