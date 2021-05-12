@@ -54,16 +54,63 @@
       </header>
       <main id="mainHome">
         <div id="contentContainer">
-          <form id="contactForm">
+          <form action="/assets/js/main.js" id="contactForm">
             <h2 id="contactTitle">Contact Form</h2>
-            <section id="queryInputArea"></section>
+            <section id="queryInputArea">
+              <label for="formName" class="input-label">
+                <input type="text" class="input-box" id="formName" required />
+                <span class="placeholder">Name (required)</span> </label
+              ><br />
+              <label for="formEmail" class="input-label">
+                <input type="text" class="input-box" id="formEmail" required />
+                <span class="placeholder">Email (required)</span> </label
+              ><br />
+              <label for="formSubject" class="input-label">
+                <input
+                  type="text"
+                  class="input-box"
+                  id="formSubject"
+                  required
+                />
+                <span class="placeholder">Subject</span> </label
+              ><br />
+            </section>
             <section id="textInputArea">
               <textarea
                 name="Subject"
                 id="contactSubject"
+                class="input-box"
+                placeholder="Your Message"
                 cols="30"
-                rows="10"
+                rows="15"
               ></textarea>
+            </section>
+            <section id="buttonInputArea">
+              <label for="confirmEmail" id="confirmEmailLabel">
+                <input
+                  type="checkbox"
+                  name="confirmEmail"
+                  id="confirmEmailCheckbox"
+                /><span class="button-text"
+                  >Send a copy of this to my email.</span
+                ></label
+              >
+              <br />
+              <input
+                type="button"
+                value="Submit"
+                id="submitButton"
+                class="form-button"
+              />
+              <input
+                type="button"
+                value="Reset"
+                id="resetButton"
+                class="form-button"
+              />
+              <span id="formMessage" class="button-text" value=""
+                >Email field is required.</span
+              >
             </section>
           </form>
           <!-- insert content here -->

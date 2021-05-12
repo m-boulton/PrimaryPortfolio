@@ -298,19 +298,100 @@
   color: inherit;
 }
 #mainHome #contentContainer #contactForm {
-  height: 76vh;
+  min-height: 70vh;
   width: 86vw;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 3px solid white;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+}
+#mainHome #contentContainer #contactForm #contactTitle {
+  padding-bottom: 0.5em;
+  font-size: 3rem;
+  font-weight: bold;
+}
+#mainHome #contentContainer #contactForm .input-label {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3.5em;
+}
+#mainHome #contentContainer #contactForm .input-label .input-box {
+  border: none;
+  appearance: none;
+  background: none;
+  padding: 0.5em;
+  border-radius: 3px;
+  width: 80vw;
+  outline: none;
+  font-size: 1.4rem;
+}
+#mainHome #contentContainer #contactForm .input-label .placeholder {
+  position: absolute;
+  left: 0;
+  top: 1.9em;
+  transform: translateY(-80%);
+  color: #74b9ff;
+  transition: ease-in-out 0.3s;
+}
+#mainHome #contentContainer #contactForm .input-label input:valid,
+#mainHome #contentContainer #contactForm .input-label input:focus {
+  background: rgba(255, 255, 255, 0.9);
+}
+#mainHome #contentContainer #contactForm .input-label input:valid + .placeholder,
+#mainHome #contentContainer #contactForm .input-label input:focus + .placeholder {
+  top: 1em;
+  font-size: 12px;
+  color: #0984e3;
+}
+#mainHome #contentContainer #contactForm #textInputArea {
+  width: 100%;
 }
 #mainHome #contentContainer #contactForm #textInputArea textarea {
+  width: 100%;
+  height: 100%;
+  margin-top: 1.5em;
   border: none;
-  border-top: 2px solid #0984e3;
-  background-image: none;
-  background-color: transparent;
+  appearance: none;
+  background: white;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.8rem;
+  font-family: Arial;
+}
+#mainHome #contentContainer #contactForm #textInputArea textarea::placeholder {
+  color: #0984e3;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#mainHome #contentContainer #contactForm #textInputArea textarea:focus::placeholder {
+  color: transparent;
+  background: white;
+}
+#mainHome #contentContainer #contactForm #buttonInputArea input {
+  transition: background-image 0.6s ease-in-out;
+}
+#mainHome #contentContainer #contactForm #buttonInputArea .form-button {
+  font-size: 1.8rem;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+#mainHome #contentContainer #contactForm #buttonInputArea #submitButton {
+  background-image: radial-gradient(#74b9ff, #0984e3);
+}
+#mainHome #contentContainer #contactForm #buttonInputArea #submitButton:hover {
+  background-image: radial-gradient(#0984e3, #74b9ff);
+}
+#mainHome #contentContainer #contactForm #buttonInputArea #resetButton {
+  background-image: radial-gradient(#d35400, #c0392b);
+}
+#mainHome #contentContainer #contactForm #buttonInputArea #resetButton:hover {
+  background-image: radial-gradient(#c0392b, #e74c3c);
+}
+#mainHome #contentContainer #contactForm #buttonInputArea .button-text {
+  font-size: 1.5rem;
+  margin: 0 auto;
 }
 
 #footer {
