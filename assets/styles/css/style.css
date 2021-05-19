@@ -240,13 +240,23 @@
   position: fixed;
   display: grid;
   grid-template-areas: ". top exit" "left middle right" "bottom bottom bottom";
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 1fr 14fr 1fr;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
   justify-items: center;
   align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #pageCover #pageCoverContent {
+    grid-template-columns: 1fr 14fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  #pageCover #pageCoverContent {
+    grid-template-columns: 1fr 20fr 1fr;
+  }
 }
 #pageCover #pageCoverContent .cover-grid-items {
   width: 100%;
@@ -270,7 +280,27 @@
 }
 #pageCover #pageCoverContent #coverMiddle {
   grid-area: middle;
-  background: black;
+  font-size: 2.5vw;
+  line-height: 1.2em;
+  background: rgba(10, 10, 10, 0.9);
+  overflow-y: scroll;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #pageCover #pageCoverContent #coverMiddle {
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 1024px) {
+  #pageCover #pageCoverContent #coverMiddle {
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+}
+#pageCover #pageCoverContent #coverMiddle pre {
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.9);
 }
 #pageCover #pageCoverContent #coverRight {
   grid-area: right;

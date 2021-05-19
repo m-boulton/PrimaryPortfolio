@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 #pageCover {
   position: absolute;
   display: none;
@@ -16,13 +18,19 @@
       ". top exit"
       "left middle right"
       "bottom bottom bottom";
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 1fr 14fr 1fr;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
     justify-items: center;
     align-items: center;
+    @include tablet {
+      grid-template-columns: 1fr 14fr 1fr;
+    }
+    @include desktop {
+      grid-template-columns: 1fr 20fr 1fr;
+    }
     .cover-grid-items {
       width: 100%;
       height: 100%;
@@ -45,7 +53,23 @@
     }
     #coverMiddle {
       grid-area: middle;
-      background: black;
+      font-size: 2.5vw;
+      line-height: 1.2em;
+      background: rgba(10, 10, 10, 0.9);
+      overflow-y: scroll;
+      @include tablet {
+        font-size: 2rem;
+        line-height: 1.2em;
+      }
+      @include desktop {
+        font-size: 2rem;
+        line-height: 1.2em;
+      }
+      pre {
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 10, 0.9);
+      }
     }
     #coverRight {
       grid-area: right;
