@@ -54,7 +54,7 @@
       </header>
       <main id="mainHome">
         <div id="contentContainer">
-          <form action="/assets/js/main.js" id="contactForm">
+          <form id="contactForm">
             <h2 id="contactTitle">Contact Me</h2>
             <section id="queryInputArea">
               <label for="formName" class="input-label">
@@ -77,8 +77,8 @@
             </section>
             <section id="textInputArea">
               <textarea
-                name="Subject"
-                id="contactSubject"
+                name="Message"
+                id="formMessage"
                 class="input-box"
                 placeholder="Your Message"
                 cols="30"
@@ -86,11 +86,12 @@
               ></textarea>
             </section>
             <section id="buttonInputArea">
-              <label for="confirmEmail" id="confirmEmailLabel">
+              <label for="confirmEmailCheckbox" id="confirmEmailLabel">
                 <input
                   type="checkbox"
                   name="confirmEmail"
                   id="confirmEmailCheckbox"
+                  value="false"
                 /><span class="button-text"
                   >Send a copy of this to my email.</span
                 ></label
@@ -108,9 +109,7 @@
                 id="resetButton"
                 class="form-button"
               />
-              <span id="formMessage" class="button-text" value=""
-                >Email field is required.</span
-              >
+              <span id="formMessageOutput" class="button-text" value=""></span>
             </section>
           </form>
           <!-- insert content here -->
