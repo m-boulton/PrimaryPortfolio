@@ -1,0 +1,57 @@
+#pageCover {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0vh;
+  color: white;
+  z-index: 20;
+  transition: ease 0.3s;
+  #pageCoverContent {
+    position: fixed;
+    display: grid;
+    grid-template-areas:
+      ". top exit"
+      "left middle right"
+      "bottom bottom bottom";
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 14fr 1fr;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-items: center;
+    align-items: center;
+    .cover-grid-items {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      z-index: 5;
+      i {
+        z-index: -5;
+      }
+    }
+    #coverTop {
+      grid-area: top;
+    }
+    #coverExit {
+      grid-area: exit;
+    }
+    #coverLeft {
+      grid-area: left;
+    }
+    #coverMiddle {
+      grid-area: middle;
+      background: black;
+    }
+    #coverRight {
+      grid-area: right;
+    }
+    #coverBottom {
+      grid-area: bottom;
+    }
+  }
+}
