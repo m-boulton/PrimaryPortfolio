@@ -67,73 +67,75 @@
           </div>
           <div id="workPanel">
             <div id="workCards">
-              <div class="work-card">
+              <div class="work-card" id="aboutMe">
                 <h3 class="work-card-header">About Myself</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                  nisi labore animi, recusandae inventore vitae fugiat enim
-                  deserunt sint nostrum! Consequuntur commodi voluptatem
-                  assumenda laborum cumque quam! Voluptate, adipisci
-                  consequuntur!
-                  <!--  -->
+                  Throughout my life I have been drawn to understanding current computer technology, I have spent a great deal of time personally building my own computers as well as helping family and friends with their own.
+                  <br>
+                  I am well versed in the windows platform however recently have become more skilled in the linux operating systems, specifically the debian client and some ubuntu.
+                  <br>
+                  I am a self taught developer with a strong ability to learn and research coding issues in an efficient manner, I have spent plenty of time researching the documentation for languages that I am currently implementing.
+                  <br>
+                  I am now researching program functions that take me out of the common paths of languages, and most easily accessible information, which has required more time to be spent reading language documentation.
                 </p>
               </div>
 
-              <div class="work-card">
-                <h3 class="work-card-header">My Current Projects</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eligendi vel, illo nobis error nesciunt facilis magni nam quis
-                  earum vero? Modi aliquid soluta quos harum itaque tenetur
-                  vitae non veniam!
-                  <!--  -->
-                </p>
-              </div>
-              <div class="work-card">
-                <h3 class="work-card-header">Future Development</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eligendi vel, illo nobis error nesciunt facilis magni nam quis
-                  earum vero? Modi aliquid soluta quos harum itaque tenetur
-                  vitae non veniam!
-                  <!--  -->
-                </p>
-              </div>
-              <div class="work-card">
-                <h3 class="work-card-header">My Interests and Hobbies</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eligendi vel, illo nobis error nesciunt facilis magni nam quis
-                  earum vero? Modi aliquid soluta quos harum itaque tenetur
-                  vitae non veniam!
-                  <!--  -->
-                </p>
-              </div>
-              <div class="work-card">
+              <div class="work-card" id="languagesLearned">
                 <h3 class="work-card-header">Coding Languages I've Learnt</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eligendi vel, illo nobis error nesciunt facilis magni nam quis
-                  earum vero? Modi aliquid soluta quos harum itaque tenetur
-                  vitae non veniam!
-                  <!--  -->
+                  Initially I learnt HTML and CSS, I decided to add some initial code onto github but didnt continue since I was still in a learning stage, then I moved on and learnt Javascript vanilla, then I added some jquery to my projects, at that point I decided to learn the Reactjs library and Redux for state management but since the introduction of react hooks I have not needed to implement redux in any projects.
+                  <br>
+                  After learning these frontend languages I decided to host my projects on my own virtual private server, while looking into the deployment of my code I started to realize I wanted to host all future code on my own Git server (instead of github) and use git hooks to deploy my code to production folders.
+                  <br>
+                  My vps is based on debian 10, I have been able to use the debian client with ssh logins and putty, I decided to use nginx as a proxy service and certbot for certification keys for https web connections and my smtp email services, all of my backend services are built in nodejs and I used a plethera of npm packages like Expressjs mongoose nodemailer dotenv and nodemon.
+                  <br>
+                  Since I needed a database to store data I have been using the mongodb.com collections Saas and have found it quite efficient for my use case.
                 </p>
               </div>
 
-              <div class="work-card">
-                <h3 class="work-card-header">Career History</h3>
-                <p></p>
-                <ul id="aboutList">
-                  <li>- Four years as an Electrician.</li>
-                  <br />
-                  <li>- Eight years as a self-employed contractor.</li>
-                  <br />
-                  <li>
-                    - For the past year and a half i have been teaching myself
-                    to write code.
-                  </li>
-                </ul>
+              <div class="work-card" id="currentProjects">
+                <h3 class="work-card-header">Current Projects</h3>
+                <p>
+                  Currently im building a reactjs based login page that allows an account login and a signup form for new users, im implementing bootstrap for styling and using JWT tokens stored in the local storage of the browser with a refresh token system for administration token management.
+                  <br>
+                  I will be using this login system for future projects that require user credentials, I know this is already done with authorization services like Oauth and authO but I wanted to build an authorization system so that I would be able to work with a token system in conjunction with a database.
+                </p>
               </div>
+
+              <div class="work-card" id="futureDev">
+                <h3 class="work-card-header">Future Development</h3>
+                <p>
+                  I have enjoyed learning the MERN stack but I strive to learn more languages in the future, in the future I would like to move over to a typescript compiler since I believe it will help reduce simple coding errors.
+                  <br>
+                  I like the mongoose package but I would like to learn a true SQL language and implement it in my future work for better relational database functions.
+                  <br>
+                  I would like to move into learning how to build android apps and would want to link it to a SMS service.
+                </p>
+              </div>
+
+              <div class="work-card" id="history">
+                <h3 class="work-card-header">Career History</h3>
+                <p>
+                  Initially I worked as an industrial electrician for 4 years, I was employed at Syntech Enerflex for two and a half years and then I worked another year and a half at Pronghorn Controls, 
+                  <br>
+                  then I worked as a self employed contractor for 8 years, the majority of the work was the building exterior railings on decks and patio's.
+                  <br>
+                  for the past two years I have been developing my coding skills and have really enjoyed the process of building something with a logical component to its behaviour, my first git push was to my github profile in 2019 and since then I have been taking an increased interest in learning more about software engineering.
+                </p>
+              </div>
+              
+              <div class="work-card" id="hobbies">
+                <h3 class="work-card-header">Interests and Hobbies</h3>
+                <p>
+                  I enjoy building small microcontrollers based on the arduino ide and teensy microcontroller, I also have an interest in building drones for both FPV and Cinematic dones, through my intersts in small electronics I have developed a skill in soldering and electronics repair.
+                  <br>
+                  I have always had a deep interest with computer technology since a young age, I have always built my own computer and am quite adept at pc repair and modification, I am well versed on the windows platform and use a windows server that stores the majority of my data, in the future I will be building my own homelab and playing around with virtualization of freenas and parsec.
+                  <br>
+                  I have always been quite capable with building with my hands and enjoy woodworking and welding, currently I am building my own computer desk with inlayed adressable led strips.
+                  
+                </p>
+              </div>
+
             </div>
           </div>
         </div>

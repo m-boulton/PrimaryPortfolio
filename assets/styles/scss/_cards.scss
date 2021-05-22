@@ -51,6 +51,7 @@
     }
     @include mobile {
       width: 100%;
+      flex: 1 0 auto;
       background-color: rgba(0, 0, 0, 0.6);
     }
     @include tablet {
@@ -58,7 +59,7 @@
       margin: 1%;
     }
     @include desktop {
-      flex: 1 0 20%;
+      flex: 1 0 33%;
       margin: 1%;
     }
     h3 {
@@ -86,10 +87,10 @@
       font-size: 1.4rem;
       line-height: 1.2em;
       @include tablet {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
       @include desktop {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
       }
     }
     #aboutList {

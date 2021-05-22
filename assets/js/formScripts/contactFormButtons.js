@@ -11,11 +11,17 @@ async function contactFormButtons(e) {
     // check to make sure require fields arent empty (boolean or message)
     let formValid = await formValidate(formData);
 
-    // sends form data (object) to be processed to backend
+    // sends form data (object) to be processed to backend and renders message in the form
     if (formValid === true) {
+      // renders a message when submitting the form with fetch post
       document.getElementById("formMessageOutput").textContent =
         "Submitting form...";
-      return formSubmit(formData);
+      let response = await formSubmit(formData);
+
+      // returns out of the function and renders the server response (obj.data)
+      return (document.getElementById(
+        "formMessageOutput"
+      ).textContent = `${response.data}`);
     }
 
     // outputs error message if required fields are empty
