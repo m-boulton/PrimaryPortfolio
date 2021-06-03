@@ -1,6 +1,5 @@
 .env
+.vscode
 node_modules
 *.txt
 *.pdf
-todo.md
-node_modules
