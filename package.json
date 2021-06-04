@@ -2,10 +2,10 @@
   "name": "primaryportfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "dev": "sass --watch assets/styles/scss:assets/styles/css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "sass --watch assets/styles/scss:assets/styles/css",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -14,10 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
+    "jest": "^27.0.4",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.11"
   }
