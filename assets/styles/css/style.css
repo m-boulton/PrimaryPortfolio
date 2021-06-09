@@ -100,6 +100,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 0;
+  height: 92vh;
 }
 #mainHome #contentContainer {
   margin: 1rem 3rem;
@@ -310,38 +311,59 @@
 }
 
 #contactForm {
+  display: grid;
+  grid-template-areas: "header header" "input input" "text text" "buttons buttons";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr 10fr 2fr;
   width: 86vw;
+  height: 90%;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 3px solid white;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+  border: 3px solid black;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.7));
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #contactForm {
+    grid-template-rows: 1fr 6fr 10fr 2fr;
+  }
+}
+@media (min-width: 1024px) {
+  #contactForm {
+    height: 95%;
+    grid-template-areas: "header header" "input text" "buttons text";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 6fr 10fr;
+  }
 }
 #contactForm #contactTitle {
+  grid-area: header;
   padding-bottom: 0.5em;
   font-size: 3rem;
   font-weight: bold;
   color: #0984e3;
   text-decoration: underline;
 }
-#contactForm .input-label {
+#contactForm #queryInputArea {
+  grid-area: input;
+}
+#contactForm #queryInputArea .input-label {
   position: relative;
   font-size: 2rem;
   font-weight: bold;
   line-height: 3.5em;
 }
-#contactForm .input-label .input-box {
+#contactForm #queryInputArea .input-label .input-box {
+  width: 90%;
   appearance: none;
   background: none;
   border: none;
   border-bottom: 0.2em solid #74b9ff;
-  border-radius: 0.3em;
   padding: 0.5em;
-  width: 80vw;
   outline: none;
   font-size: 1.4rem;
 }
-#contactForm .input-label .placeholder {
+#contactForm #queryInputArea .input-label .placeholder {
   position: absolute;
   left: 0;
   top: 1.9em;
@@ -349,27 +371,27 @@
   color: #74b9ff;
   transition: ease-in-out 0.3s;
 }
-#contactForm .input-label input:valid,
-#contactForm .input-label input:focus {
-  background: rgba(255, 255, 255, 0.9);
+#contactForm #queryInputArea .input-label input:valid,
+#contactForm #queryInputArea .input-label input:focus {
+  background: rgba(20, 20, 20, 0.8);
 }
-#contactForm .input-label input:valid + .placeholder,
-#contactForm .input-label input:focus + .placeholder {
+#contactForm #queryInputArea .input-label input:valid + .placeholder,
+#contactForm #queryInputArea .input-label input:focus + .placeholder {
   top: 1em;
   font-size: 12px;
   color: #0984e3;
 }
 #contactForm #textInputArea {
+  grid-area: text;
   width: 100%;
 }
 #contactForm #textInputArea textarea {
   width: 100%;
   height: 100%;
-  margin-top: 1.5em;
   outline: none;
   appearance: none;
   border: none;
-  background: white;
+  background: rgba(20, 20, 20, 0.8);
   border-bottom: 0.2em solid #74b9ff;
   border-radius: 0.3em;
   font-size: 1.8rem;
@@ -382,30 +404,59 @@
 }
 #contactForm #textInputArea textarea:focus::placeholder {
   color: transparent;
-  background: white;
+  background: rgba(20, 20, 20, 0.95);
+}
+#contactForm #buttonInputArea {
+  grid-area: buttons;
+  color: #74b9ff;
+  text-align: center;
 }
 #contactForm #buttonInputArea input {
   transition: background-image 0.6s ease-in-out;
 }
-#contactForm #buttonInputArea .form-button {
+#contactForm #buttonInputArea #confirmEmailLabel #confirmEmailCheckbox {
+  background-image: black;
+}
+#contactForm #buttonInputArea #submitButtons {
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+#contactForm #buttonInputArea #submitButtons .form-button {
+  width: 40%;
   font-size: 1.8rem;
+  font-weight: 500;
   padding: 0.5em;
   border-radius: 0.5em;
   border: none;
+  cursor: pointer;
 }
-#contactForm #buttonInputArea #submitButton {
-  background-image: radial-gradient(#74b9ff, #0984e3);
+@media (min-width: 768px) and (max-width: 1023px) {
+  #contactForm #buttonInputArea #submitButtons .form-button {
+    width: 30%;
+  }
 }
-#contactForm #buttonInputArea #submitButton:hover {
-  background-image: radial-gradient(#0984e3, #74b9ff);
+#contactForm #buttonInputArea #submitButtons #submitButton {
+  color: inherit;
+  background: #0098d7;
+  transition: ease 0.4s;
+  box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.4);
 }
-#contactForm #buttonInputArea #resetButton {
-  background-image: radial-gradient(#d35400, #c0392b);
+#contactForm #buttonInputArea #submitButtons #submitButton:hover {
+  box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.9);
 }
-#contactForm #buttonInputArea #resetButton:hover {
-  background-image: radial-gradient(#c0392b, #e74c3c);
+#contactForm #buttonInputArea #submitButtons #resetButton {
+  color: inherit;
+  background: #ff1428;
+  transition: ease 0.4s;
+  box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.4);
+}
+#contactForm #buttonInputArea #submitButtons #resetButton:hover {
+  box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.7);
 }
 #contactForm #buttonInputArea .button-text {
+  grid-area: response;
   font-size: 1.6rem;
   line-height: 1.2em;
 }
@@ -560,10 +611,9 @@ body {
 
 #container {
   width: 100%;
-  min-height: calc(100% - 5rem);
+  min-height: 100vh;
   font-size: 3rem;
   position: absolute;
-  padding-bottom: 5rem;
 }
 #container #background {
   height: 100%;

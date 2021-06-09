@@ -11,10 +11,9 @@ body {
 }
 #container {
   width: 100%;
-  min-height: calc(100% - 5rem);
+  min-height: 100vh;
   font-size: 3rem;
   position: absolute;
-  padding-bottom: 5rem;
   #background {
     height: 100%;
     width: 100%;
