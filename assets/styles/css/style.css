@@ -100,7 +100,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 0;
-  height: 92vh;
+  min-height: 92vh;
 }
 #mainHome #contentContainer {
   margin: 1rem 3rem;
@@ -361,6 +361,7 @@
   border-bottom: 0.2em solid #74b9ff;
   padding: 0.5em;
   outline: none;
+  color: #74b9ff;
   font-size: 1.4rem;
 }
 #contactForm #queryInputArea .input-label .placeholder {
@@ -394,6 +395,7 @@
   background: rgba(20, 20, 20, 0.8);
   border-bottom: 0.2em solid #74b9ff;
   border-radius: 0.3em;
+  color: #74b9ff;
   font-size: 1.8rem;
   font-family: Arial;
 }
@@ -421,7 +423,6 @@
   margin: 0.5em 0;
   display: flex;
   justify-content: space-evenly;
-  color: white;
 }
 #contactForm #buttonInputArea #submitButtons .form-button {
   width: 40%;
@@ -438,22 +439,24 @@
   }
 }
 #contactForm #buttonInputArea #submitButtons #submitButton {
-  color: inherit;
-  background: #0098d7;
+  color: rgba(0, 206, 201, 0.9);
+  background: #2d3436;
+  font-weight: 600;
   transition: ease 0.4s;
-  box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.4);
+  box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.6);
 }
 #contactForm #buttonInputArea #submitButtons #submitButton:hover {
-  box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.9);
+  box-shadow: 0px 0px 12px 12px rgba(0, 206, 201, 0.8);
 }
 #contactForm #buttonInputArea #submitButtons #resetButton {
-  color: inherit;
-  background: #ff1428;
+  color: rgba(255, 40, 60, 0.7);
+  font-weight: 600;
+  background: #2d3436;
   transition: ease 0.4s;
-  box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.4);
+  box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.6);
 }
 #contactForm #buttonInputArea #submitButtons #resetButton:hover {
-  box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.7);
+  box-shadow: 0px 0px 12px 12px rgba(255, 40, 60, 0.8);
 }
 #contactForm #buttonInputArea .button-text {
   grid-area: response;
