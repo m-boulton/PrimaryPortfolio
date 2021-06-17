@@ -316,7 +316,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 6fr 10fr 2fr;
   width: 86vw;
-  height: 90%;
+  height: 80vh;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -330,7 +330,7 @@
 }
 @media (min-width: 1024px) {
   #contactForm {
-    height: 95%;
+    height: 86vh;
     grid-template-areas: "header header" "input text" "buttons text";
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 6fr 10fr;
@@ -412,19 +412,26 @@
   grid-area: buttons;
   color: #74b9ff;
   text-align: center;
+  position: relative;
 }
-#contactForm #buttonInputArea input {
+#contactForm #buttonInputArea #buttonInputs {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 1rem);
+  margin-right: 1rem;
+}
+#contactForm #buttonInputArea #buttonInputs input {
   transition: background-image 0.6s ease-in-out;
 }
-#contactForm #buttonInputArea #confirmEmailLabel #confirmEmailCheckbox {
+#contactForm #buttonInputArea #buttonInputs #confirmEmailLabel #confirmEmailCheckbox {
   background-image: black;
 }
-#contactForm #buttonInputArea #submitButtons {
+#contactForm #buttonInputArea #buttonInputs #submitButtons {
   margin: 0.5em 0;
   display: flex;
   justify-content: space-evenly;
 }
-#contactForm #buttonInputArea #submitButtons .form-button {
+#contactForm #buttonInputArea #buttonInputs #submitButtons .form-button {
   width: 40%;
   font-size: 1.8rem;
   font-weight: 500;
@@ -434,31 +441,31 @@
   cursor: pointer;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #contactForm #buttonInputArea #submitButtons .form-button {
+  #contactForm #buttonInputArea #buttonInputs #submitButtons .form-button {
     width: 30%;
   }
 }
-#contactForm #buttonInputArea #submitButtons #submitButton {
+#contactForm #buttonInputArea #buttonInputs #submitButtons #submitButton {
   color: rgba(0, 206, 201, 0.9);
   background: #2d3436;
   font-weight: 600;
   transition: ease 0.4s;
   box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.6);
 }
-#contactForm #buttonInputArea #submitButtons #submitButton:hover {
+#contactForm #buttonInputArea #buttonInputs #submitButtons #submitButton:hover {
   box-shadow: 0px 0px 12px 12px rgba(0, 206, 201, 0.8);
 }
-#contactForm #buttonInputArea #submitButtons #resetButton {
+#contactForm #buttonInputArea #buttonInputs #submitButtons #resetButton {
   color: rgba(255, 40, 60, 0.7);
   font-weight: 600;
   background: #2d3436;
   transition: ease 0.4s;
   box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.6);
 }
-#contactForm #buttonInputArea #submitButtons #resetButton:hover {
+#contactForm #buttonInputArea #buttonInputs #submitButtons #resetButton:hover {
   box-shadow: 0px 0px 12px 12px rgba(255, 40, 60, 0.8);
 }
-#contactForm #buttonInputArea .button-text {
+#contactForm #buttonInputArea #buttonInputs .button-text {
   grid-area: response;
   font-size: 1.6rem;
   line-height: 1.2em;

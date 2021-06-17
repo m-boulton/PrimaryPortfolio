@@ -13,7 +13,7 @@
   grid-template-rows: 1fr 6fr 10fr 2fr;
 
   width: 86vw;
-  height: 90%;
+  height: 80vh;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -27,7 +27,7 @@
     grid-template-rows: 1fr 6fr 10fr 2fr;
   }
   @include desktop {
-    height: 95%;
+    height: 86vh;
     grid-template-areas:
       "header header"
       "input text"
@@ -112,57 +112,64 @@
     grid-area: buttons;
     color: $accent-light;
     text-align: center;
-    input {
-      transition: background-image 0.6s ease-in-out;
-    }
-    #confirmEmailLabel {
-      #confirmEmailCheckbox {
-        background-image: black;
+    position: relative;
+    #buttonInputs {
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 1rem);
+      margin-right: 1rem;
+      input {
+        transition: background-image 0.6s ease-in-out;
       }
-    }
-    #submitButtons {
-      margin: 0.5em 0;
-      display: flex;
-      justify-content: space-evenly;
-      .form-button {
-        width: 40%;
-        font-size: 1.8rem;
-        font-weight: 500;
-        padding: 0.5em;
-        border-radius: 0.5em;
-        border: none;
-        cursor: pointer;
-        @include tablet {
-          width: 30%;
+      #confirmEmailLabel {
+        #confirmEmailCheckbox {
+          background-image: black;
         }
       }
-      #submitButton {
-        color: rgba(0, 206, 201, 0.9);
-        // background: rgb(0, 152, 215);
-        background: $dark;
-        font-weight: 600;
-        transition: ease 0.4s;
-        box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.6);
-        &:hover {
-          box-shadow: 0px 0px 12px 12px rgba(0, 206, 201, 0.8);
+      #submitButtons {
+        margin: 0.5em 0;
+        display: flex;
+        justify-content: space-evenly;
+        .form-button {
+          width: 40%;
+          font-size: 1.8rem;
+          font-weight: 500;
+          padding: 0.5em;
+          border-radius: 0.5em;
+          border: none;
+          cursor: pointer;
+          @include tablet {
+            width: 30%;
+          }
+        }
+        #submitButton {
+          color: rgba(0, 206, 201, 0.9);
+          // background: rgb(0, 152, 215);
+          background: $dark;
+          font-weight: 600;
+          transition: ease 0.4s;
+          box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.6);
+          &:hover {
+            box-shadow: 0px 0px 12px 12px rgba(0, 206, 201, 0.8);
+          }
+        }
+        #resetButton {
+          color: rgba(255, 40, 60, 0.7);
+          // background: rgba(255, 20, 40, 1);
+          font-weight: 600;
+          background: $dark;
+          transition: ease 0.4s;
+          box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.6);
+          &:hover {
+            box-shadow: 0px 0px 12px 12px rgba(255, 40, 60, 0.8);
+          }
         }
       }
-      #resetButton {
-        color: rgba(255, 40, 60, 0.7);
-        // background: rgba(255, 20, 40, 1);
-        font-weight: 600;
-        background: $dark;
-        transition: ease 0.4s;
-        box-shadow: 0px 0px 8px 8px rgba(255, 40, 60, 0.6);
-        &:hover {
-          box-shadow: 0px 0px 12px 12px rgba(255, 40, 60, 0.8);
-        }
+      .button-text {
+        grid-area: response;
+        font-size: 1.6rem;
+        line-height: 1.2em;
       }
-    }
-    .button-text {
-      grid-area: response;
-      font-size: 1.6rem;
-      line-height: 1.2em;
     }
   }
 }
