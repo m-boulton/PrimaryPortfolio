@@ -276,15 +276,31 @@
 #pageCover #pageCoverContent #coverExit {
   grid-area: exit;
 }
+#pageCover #pageCoverContent #coverExit:hover i {
+  transition: ease 0.3s;
+  background: rgba(129, 236, 236, 0.6);
+  box-shadow: 0 0 1rem 0.4rem rgba(129, 236, 236, 0.8);
+}
 #pageCover #pageCoverContent #coverLeft {
   grid-area: left;
 }
+#pageCover #pageCoverContent #coverLeft:hover i {
+  transition: ease 0.3s;
+  background: rgba(129, 236, 236, 0.4);
+  box-shadow: 0 0 10rem 4rem rgba(129, 236, 236, 0.8);
+}
 #pageCover #pageCoverContent #coverMiddle {
   grid-area: middle;
+  display: grid;
+  grid-template-rows: 1fr 19fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "select" "code";
   font-size: 2.5vw;
   line-height: 1.2em;
-  background: rgba(10, 10, 10, 0.9);
+  background: #0a0a0a;
   overflow-y: scroll;
+  justify-items: center;
+  z-index: 21;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #pageCover #pageCoverContent #coverMiddle {
@@ -298,13 +314,29 @@
     line-height: 1.2em;
   }
 }
+#pageCover #pageCoverContent #coverMiddle select {
+  grid-area: select;
+  width: 50%;
+  background: #0a0a0a;
+  border: solid 3px #0a0a0a;
+  border-radius: 0.2em;
+  color: #74b9ff;
+  font-size: 2rem;
+}
 #pageCover #pageCoverContent #coverMiddle pre {
-  width: 100%;
+  grid-area: code;
+  width: 90%;
   height: 100%;
   background: rgba(10, 10, 10, 0.9);
+  font-size: 14rem;
 }
 #pageCover #pageCoverContent #coverRight {
   grid-area: right;
+}
+#pageCover #pageCoverContent #coverRight:hover i {
+  transition: ease 0.3s;
+  background: rgba(129, 236, 236, 0.4);
+  box-shadow: 0 0 10rem 4rem rgba(129, 236, 236, 0.8);
 }
 #pageCover #pageCoverContent #coverBottom {
   grid-area: bottom;

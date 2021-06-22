@@ -6,9 +6,6 @@ import contactFormButtons from "./formScripts/contactFormButtons.js";
 window.addEventListener("DOMContentLoaded", () => {
   // sets brightness of the background
   document.getElementById("background").style.filter = "brightness(100%)";
-
-  // prettifies the code inside the code viewer pane
-  PR.prettyPrint();
 });
 
 // Click handlers
@@ -21,7 +18,7 @@ document.querySelectorAll(".fa-code").forEach((item) => {
   });
 });
 
-// Click handlers for all code viewer pane buttons
+// Click handlers for code viewer pane
 if (document.querySelector("#pageCoverContent")) {
   document
     // sends all clicks under the code viewer pane to coverClicks function

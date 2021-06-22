@@ -1,0 +1,11 @@
+dev
+dist
+node_modules
+img
+vid
+fonts
+files
+.env
+.gitignore
+.prettierignore
+package-log.json

@@ -47,16 +47,36 @@
     }
     #coverExit {
       grid-area: exit;
+      &:hover {
+        i {
+          transition: ease 0.3s;
+          background: rgba(129, 236, 236, 0.6);
+          box-shadow: 0 0 1rem 0.4rem rgba(129, 236, 236, 0.8);
+        }
+      }
     }
     #coverLeft {
       grid-area: left;
+      &:hover {
+        i {
+          transition: ease 0.3s;
+          background: rgba(129, 236, 236, 0.4);
+          box-shadow: 0 0 10rem 4rem rgba(129, 236, 236, 0.8);
+        }
+      }
     }
     #coverMiddle {
       grid-area: middle;
+      display: grid;
+      grid-template-rows: 1fr 19fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "select" "code";
       font-size: 2.5vw;
       line-height: 1.2em;
-      background: rgba(10, 10, 10, 0.9);
+      background: rgba(10, 10, 10, 1);
       overflow-y: scroll;
+      justify-items: center;
+      z-index: 21;
       @include tablet {
         font-size: 2rem;
         line-height: 1.2em;
@@ -65,14 +85,32 @@
         font-size: 2rem;
         line-height: 1.2em;
       }
+      select {
+        grid-area: select;
+        width: 50%;
+        background: rgba(10, 10, 10, 1);
+        border: solid 3px rgba(10, 10, 10, 1);
+        border-radius: 0.2em;
+        color: $accent-light;
+        font-size: 2rem;
+      }
       pre {
-        width: 100%;
+        grid-area: code;
+        width: 90%;
         height: 100%;
         background: rgba(10, 10, 10, 0.9);
+        font-size: 14rem;
       }
     }
     #coverRight {
       grid-area: right;
+      &:hover {
+        i {
+          transition: ease 0.3s;
+          background: rgba(129, 236, 236, 0.4);
+          box-shadow: 0 0 10rem 4rem rgba(129, 236, 236, 0.8);
+        }
+      }
     }
     #coverBottom {
       grid-area: bottom;
