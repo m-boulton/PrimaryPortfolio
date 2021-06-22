@@ -5,7 +5,8 @@ img
 vid
 fonts
 files
+.git
 .env
 .gitignore
 .prettierignore
-package-log.json
+package-lock.json
