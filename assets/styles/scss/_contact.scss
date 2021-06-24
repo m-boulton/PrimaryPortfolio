@@ -10,7 +10,7 @@
     "text text"
     "buttons buttons";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr 8fr 3fr;
+  grid-template-rows: 1fr 5fr 7fr 3fr;
 
   width: 86vw;
   margin-bottom: 6vh;
@@ -23,9 +23,6 @@
     rgba(0, 0, 0, 0.7),
     rgba(20, 20, 20, 0.7)
   );
-  @include tablet {
-    grid-template-rows: 1fr 6fr 10fr 2fr;
-  }
   @include desktop {
     height: 86vh;
     grid-template-areas:
@@ -114,10 +111,15 @@
     position: relative;
     #buttonInputs {
       position: absolute;
-      height: 100%;
       bottom: 0;
       width: calc(100% - 1rem);
       margin-right: 1rem;
+      @include mobile {
+        height: 100%;
+      }
+      @include tablet {
+        height: 100%;
+      }
       input {
         transition: background-image 0.6s ease-in-out;
       }
