@@ -2,7 +2,7 @@
 
 #workSelect {
   grid-area: buttons;
-  // .current-viewer
+  margin-bottom: 6vh;
   #current {
     background: $fade;
     background-size: 200%;
@@ -44,6 +44,7 @@
     }
   }
   .work-panel {
+    // display: none;
     margin-top: -0.2em;
     padding: 0 0.5em;
     background: rgba(20, 20, 20, 0.9);
@@ -52,7 +53,7 @@
     line-height: 1.8em;
     overflow: hidden;
     max-height: 0;
-    transition: max-height ease-in-out 1s;
+    transition: max-height ease-in-out 0.5s;
     ol {
       list-style: disc;
       padding-left: 1em;

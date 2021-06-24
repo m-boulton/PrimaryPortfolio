@@ -13,15 +13,17 @@
     }
     #overview {
       grid-area: overview;
-      max-width: 800px;
       margin-bottom: 0.6em;
       background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.8);
       @include desktop {
         display: flex;
+        padding: 1em;
         margin: 1em auto;
+        width: calc(100% - 2em);
       }
       h2 {
+        text-align: center;
+        line-height: 8vh;
         color: $accent-light;
         font-size: 2rem;
         font-weight: 600;
@@ -29,8 +31,10 @@
           font-size: 2.5rem;
         }
         @include desktop {
+          width: 100%;
           font-size: 2.7rem;
           font-weight: 700;
+          line-height: 5vh;
         }
       }
       #resumeLink {
@@ -62,11 +66,13 @@
       }
     }
     #workContainer {
+      height: 100%;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 15vh auto;
+      grid-template-rows: 10vh auto;
       grid-template-areas: "overview" "buttons";
       @include desktop {
+        grid-template-rows: 20vh auto;
         grid-template-columns: 1fr 4.5rem 2fr;
         grid-template-areas: "overview . viewer" "buttons . viewer";
       }

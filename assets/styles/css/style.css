@@ -123,18 +123,20 @@
 }
 #mainHome #contentContainer #overview {
   grid-area: overview;
-  max-width: 800px;
   margin-bottom: 0.6em;
   background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.8);
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #overview {
     display: flex;
+    padding: 1em;
     margin: 1em auto;
+    width: calc(100% - 2em);
   }
 }
 #mainHome #contentContainer #overview h2 {
+  text-align: center;
+  line-height: 8vh;
   color: #74b9ff;
   font-size: 2rem;
   font-weight: 600;
@@ -146,8 +148,10 @@
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #overview h2 {
+    width: 100%;
     font-size: 2.7rem;
     font-weight: 700;
+    line-height: 5vh;
   }
 }
 #mainHome #contentContainer #overview #resumeLink {
@@ -182,13 +186,15 @@
   }
 }
 #mainHome #contentContainer #workContainer {
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 15vh auto;
+  grid-template-rows: 10vh auto;
   grid-template-areas: "overview" "buttons";
 }
 @media (min-width: 1024px) {
   #mainHome #contentContainer #workContainer {
+    grid-template-rows: 20vh auto;
     grid-template-columns: 1fr 4.5rem 2fr;
     grid-template-areas: "overview . viewer" "buttons . viewer";
   }
@@ -548,6 +554,7 @@
 
 #workSelect {
   grid-area: buttons;
+  margin-bottom: 6vh;
 }
 #workSelect #current {
   background: linear-gradient(90deg, #1dd1a1, #0984e3, #5f27cd);
@@ -598,7 +605,7 @@
   line-height: 1.8em;
   overflow: hidden;
   max-height: 0;
-  transition: max-height ease-in-out 1s;
+  transition: max-height ease-in-out 0.5s;
 }
 #workSelect .work-panel ol {
   list-style: disc;
@@ -658,7 +665,7 @@
   left: 0;
   right: 0;
   color: white;
-  z-index: 20;
+  z-index: 14;
   transition: ease 0.3s;
 }
 @media (min-width: 1024px) {
@@ -801,10 +808,12 @@ html {
   font-size: 62.5%;
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
+html,
 body {
-  height: calc(var(--vh, 1vh) * 100);
+  overflow: auto;
 }
 
 #container {
