@@ -260,10 +260,10 @@
   display: grid;
   grid-template-areas: "header header" "input input" "text text" "buttons buttons";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 6fr 10fr 2fr;
+  grid-template-rows: 1fr 5fr 8fr 3fr;
   width: 86vw;
-  height: 80vh;
-  margin: 0 auto;
+  margin-bottom: 6vh;
+  min-height: 70vh;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 3px solid black;
@@ -284,7 +284,6 @@
 }
 #contactForm #contactTitle {
   grid-area: header;
-  padding-bottom: 0.5em;
   font-size: 3rem;
   font-weight: bold;
   color: #0984e3;
@@ -362,6 +361,7 @@
 }
 #contactForm #buttonInputArea #buttonInputs {
   position: absolute;
+  height: 100%;
   bottom: 0;
   width: calc(100% - 1rem);
   margin-right: 1rem;
@@ -665,7 +665,7 @@
   left: 0;
   right: 0;
   color: white;
-  z-index: 14;
+  z-index: 16;
   transition: ease 0.3s;
 }
 @media (min-width: 1024px) {

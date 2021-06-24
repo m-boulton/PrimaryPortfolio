@@ -10,11 +10,11 @@
     "text text"
     "buttons buttons";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 6fr 10fr 2fr;
+  grid-template-rows: 1fr 5fr 8fr 3fr;
 
   width: 86vw;
-  height: 80vh;
-  margin: 0 auto;
+  margin-bottom: 6vh;
+  min-height: 70vh;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 3px solid black;
@@ -38,7 +38,6 @@
 
   #contactTitle {
     grid-area: header;
-    padding-bottom: 0.5em;
     font-size: 3rem;
     font-weight: bold;
     color: $accent;
@@ -115,6 +114,7 @@
     position: relative;
     #buttonInputs {
       position: absolute;
+      height: 100%;
       bottom: 0;
       width: calc(100% - 1rem);
       margin-right: 1rem;
