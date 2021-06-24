@@ -25,35 +25,6 @@
           background-image: url('./assets/img/gradient-strips-landscape.jpg');
         "
       ></div>
-      <span id="pageCover">
-        <div id="pageCoverContent">
-          <section id="coverTop" class="cover-grid-items">
-            <i class="fa fa-html5" aria-hidden="true"></i>
-            <i class="fab fa-sass" aria-hidden="true"></i>
-            <i class="fab fa-js-square" aria-hidden="true"></i>
-          </section>
-          <section id="coverExit" class="cover-grid-items">
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </section>
-          <section id="coverLeft" class="cover-grid-items">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-          </section>
-          <section id="coverMiddle" class="cover-grid-items">
-            <select name="fileSelect" id="fileSelect">
-              <option value="placeholder">Please Select Language Above</option>
-              <option value="placeholder">Please Select Language Above</option>
-              <option value="placeholder">Please Select Language Above</option>
-              <option value="placeholder">Please Select Language Above</option>
-              <option value="placeholder">Please Select Language Above</option>
-            </select>
-            <pre id="codeDisplay"></pre>
-          </section>
-          <section id="coverRight" class="cover-grid-items">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          </section>
-          <section id="coverBottom" class="cover-grid-items"></section>
-        </div>
-      </span>
       <header id="header">
         <a href="/" id="logo">[ <span>mB</span> ]</a>
         <ul id="navList">
@@ -85,93 +56,420 @@
       </header>
       <main id="mainHome">
         <div id="contentContainer">
-          <div id="overview">
-            <h2>Projects I have worked on.</h2>
-            <p>
-              These are an example of projects i have worked on personally, I
-              have also included examples of files that i use on my self
-              directed virtual private server.
-            </p>
-          </div>
-          <div id="workPanel">
-            <div id="workCards">
-              <div class="work-card">
-                <div class="work-card-cover">
+          <div id="workContainer">
+            <div id="overview">
+              <h2>Projects I have worked on.</h2>
+            </div>
+            <section id="workSelect">
+              <!--  -->
+              <!--  -->
+              <button class="work-button">
+                <h3 class="work-button-title">AMD Product Website</h3>
+                <div class="language-icons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-envira"></i>
+                  <i class="fab fa-react"></i>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="work-panel">
+                <h4>Core Principles</h4>
+                <ol>
+                  <li>Load all Content from a Database</li>
+                  <li>Use Rest-API fetch requests</li>
+                  <li>Store all navigation data in LocalStorage</li>
+                  <li>Compare LocalStorage to Database</li>
+                  <li>Render all products on a single page</li>
+                </ol>
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus id beatae, possimus ipsum cupiditate, asperiores
+                  harum provident nam, in consectetur a. Quibusdam fugit
+                  molestiae fugiat vel, officia asperiores quia nostrum!
+                </p>
+                <span>
+                  <i class="far fa-file-code" title="View Code"></i>
                   <a href="#">
                     <i
-                      class="fa fa-code"
-                      id="codeCharlie"
-                      aria-hidden="true"
+                      class="fas fa-external-link-alt"
+                      title="Visit Website"
                     ></i
                   ></a>
-                  <a href="https://amd.mboulton.com/?p=ryzen"
-                    ><i class="fa fa-external-link" aria-hidden="true"></i
-                  ></a>
-                  <a href="https://github.com/m-boulton/projectAmd"
-                    ><i class="fa fa-github" aria-hidden="true"></i
-                  ></a>
-                </div>
-                <h3 class="work-card-header">AMD Product Display</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consequuntur porro nesciunt, voluptatum nihil quasi, debitis,
-                  quo nobis illum sint iusto quam a! Consequatur velit
-                  voluptatibus, aut exercitationem sint reiciendis suscipit.<br /><br />Lorem
-                  ipsum dolor sit amet consectetur, adipisicing elit. Autem
-                  recusandae, debitis iusto reprehenderit non numquam hic odio
-                  fugiat, rerum perspiciatis omnis vel assumenda placeat
-                  quibusdam amet nulla quidem qui unde.
-                </p>
-              </div>
-              <div class="work-card">
-                <div class="work-card-cover">
                   <a href="#">
-                    <i class="fa fa-code" id="codeAlpha" aria-hidden="true"></i
+                    <i class="fab fa-github" title="Visit Repository"></i
                   ></a>
-                  <a href="https://amd.mboulton.com/?p=ryzen"
-                    ><i class="fa fa-external-link" aria-hidden="true"></i
-                  ></a>
-                  <a href="https://github.com/m-boulton/projectAmd"
-                    ><i class="fa fa-github" aria-hidden="true"></i
-                  ></a>
-                </div>
-                <h3 class="work-card-header">AMD Product Display</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consequuntur porro nesciunt, voluptatum nihil quasi, debitis,
-                  quo nobis illum sint iusto quam a! Consequatur velit
-                  voluptatibus, aut exercitationem sint reiciendis suscipit.<br /><br />Lorem
-                  ipsum dolor sit amet consectetur, adipisicing elit. Autem
-                  recusandae, debitis iusto reprehenderit non numquam hic odio
-                  fugiat, rerum perspiciatis omnis vel assumenda placeat
-                  quibusdam amet nulla quidem qui unde.
-                </p>
+                </span>
               </div>
-              <div class="work-card">
-                <div class="work-card-cover">
+              <button class="work-button">
+                <h3 class="work-button-title">AMD Product Website</h3>
+                <div class="language-icons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-envira"></i>
+                  <i class="fab fa-react"></i>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="work-panel">
+                <h4>Core Principles</h4>
+                <ol>
+                  <li>Load all Content from a Database</li>
+                  <li>Use Rest-API fetch requests</li>
+                  <li>Store all navigation data in LocalStorage</li>
+                  <li>Compare LocalStorage to Database</li>
+                  <li>Render all products on a single page</li>
+                </ol>
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus id beatae, possimus ipsum cupiditate, asperiores
+                  harum provident nam, in consectetur a. Quibusdam fugit
+                  molestiae fugiat vel, officia asperiores quia nostrum!
+                </p>
+                <span>
+                  <i class="far fa-file-code" title="View Code"></i>
                   <a href="#">
-                    <i class="fa fa-code" id="codeBravo" aria-hidden="true"></i
+                    <i
+                      class="fas fa-external-link-alt"
+                      title="Visit Website"
+                    ></i
                   ></a>
-                  <a href="https://amd.mboulton.com/?p=ryzen"
-                    ><i class="fa fa-external-link" aria-hidden="true"></i
+                  <a href="#">
+                    <i class="fab fa-github" title="Visit Repository"></i
                   ></a>
-                  <a href="https://github.com/m-boulton/projectAmd"
-                    ><i class="fa fa-github" aria-hidden="true"></i
-                  ></a>
-                </div>
-                <h3 class="work-card-header">AMD Product Display</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consequuntur porro nesciunt, voluptatum nihil quasi, debitis,
-                  quo nobis illum sint iusto quam a! Consequatur velit
-                  voluptatibus, aut exercitationem sint reiciendis suscipit.<br /><br />Lorem
-                  ipsum dolor sit amet consectetur, adipisicing elit. Autem
-                  recusandae, debitis iusto reprehenderit non numquam hic odio
-                  fugiat, rerum perspiciatis omnis vel assumenda placeat
-                  quibusdam amet nulla quidem qui unde.
-                </p>
+                </span>
               </div>
-            </div>
+              <button class="work-button">
+                <h3 class="work-button-title">AMD Product Website</h3>
+                <div class="language-icons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-envira"></i>
+                  <i class="fab fa-react"></i>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="work-panel">
+                <h4>Core Principles</h4>
+                <ol>
+                  <li>Load all Content from a Database</li>
+                  <li>Use Rest-API fetch requests</li>
+                  <li>Store all navigation data in LocalStorage</li>
+                  <li>Compare LocalStorage to Database</li>
+                  <li>Render all products on a single page</li>
+                </ol>
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus id beatae, possimus ipsum cupiditate, asperiores
+                  harum provident nam, in consectetur a. Quibusdam fugit
+                  molestiae fugiat vel, officia asperiores quia nostrum!
+                </p>
+                <span>
+                  <i class="far fa-file-code" title="View Code"></i>
+                  <a href="#">
+                    <i
+                      class="fas fa-external-link-alt"
+                      title="Visit Website"
+                    ></i
+                  ></a>
+                  <a href="#">
+                    <i class="fab fa-github" title="Visit Repository"></i
+                  ></a>
+                </span>
+              </div>
+              <button class="work-button">
+                <h3 class="work-button-title">AMD Product Website</h3>
+                <div class="language-icons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-envira"></i>
+                  <i class="fab fa-react"></i>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="work-panel">
+                <h4>Core Principles</h4>
+                <ol>
+                  <li>Load all Content from a Database</li>
+                  <li>Use Rest-API fetch requests</li>
+                  <li>Store all navigation data in LocalStorage</li>
+                  <li>Compare LocalStorage to Database</li>
+                  <li>Render all products on a single page</li>
+                </ol>
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus id beatae, possimus ipsum cupiditate, asperiores
+                  harum provident nam, in consectetur a. Quibusdam fugit
+                  molestiae fugiat vel, officia asperiores quia nostrum!
+                </p>
+                <span>
+                  <i class="far fa-file-code" title="View Code"></i>
+                  <a href="#">
+                    <i
+                      class="fas fa-external-link-alt"
+                      title="Visit Website"
+                    ></i
+                  ></a>
+                  <a href="#">
+                    <i class="fab fa-github" title="Visit Repository"></i
+                  ></a>
+                </span>
+              </div>
+              <button class="work-button">
+                <h3 class="work-button-title">AMD Product Website</h3>
+                <div class="language-icons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-envira"></i>
+                  <i class="fab fa-react"></i>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="work-panel">
+                <h4>Core Principles</h4>
+                <ol>
+                  <li>Load all Content from a Database</li>
+                  <li>Use Rest-API fetch requests</li>
+                  <li>Store all navigation data in LocalStorage</li>
+                  <li>Compare LocalStorage to Database</li>
+                  <li>Render all products on a single page</li>
+                </ol>
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus id beatae, possimus ipsum cupiditate, asperiores
+                  harum provident nam, in consectetur a. Quibusdam fugit
+                  molestiae fugiat vel, officia asperiores quia nostrum!
+                </p>
+                <span>
+                  <i class="far fa-file-code" title="View Code"></i>
+                  <a href="#">
+                    <i
+                      class="fas fa-external-link-alt"
+                      title="Visit Website"
+                    ></i
+                  ></a>
+                  <a href="#">
+                    <i class="fab fa-github" title="Visit Repository"></i
+                  ></a>
+                </span>
+              </div>
+              <button class="work-button">
+                <h3 class="work-button-title">AMD Product Website</h3>
+                <div class="language-icons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-envira"></i>
+                  <i class="fab fa-react"></i>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </button>
+              <div class="work-panel">
+                <h4>Core Principles</h4>
+                <ol>
+                  <li>Load all Content from a Database</li>
+                  <li>Use Rest-API fetch requests</li>
+                  <li>Store all navigation data in LocalStorage</li>
+                  <li>Compare LocalStorage to Database</li>
+                  <li>Render all products on a single page</li>
+                </ol>
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+                  ex, assumenda consequatur suscipit quisquam fugit aliquid in
+                  sequi! Facilis, iusto sed molestiae eius recusandae, sunt
+                  aliquam temporibus sequi quisquam placeat eligendi assumenda
+                  similique, accusamus deleniti sint explicabo. Reprehenderit
+                  eos ullam sint consectetur mollitia ut in a, exercitationem,
+                  ipsam numquam fugiat doloremque dolor rerum officia ipsa quam.
+                  Eligendi laborum optio, praesentium quibusdam provident
+                  dolorem labore adipisci accusamus a nesciunt at ad dolore
+                  possimus porro odio. Neque, nobis explicabo. Impedit modi qui
+                  beatae perferendis tenetur ad voluptates, itaque tempora
+                  saepe. Veritatis cumque molestias est deleniti nihil qui
+                  dolorum similique a exercitationem quaerat ratione velit,
+                  harum quisquam ab veniam doloremque quam eveniet magnam? Quia,
+                  magnam. Excepturi dolorem amet sequi! Libero repellat tempore
+                  dolorum magnam, veniam beatae cum dicta ut at quis iste fuga
+                  minima modi quo, voluptatibus tempora, deleniti in. Voluptatem
+                  nostrum voluptatum atque cupiditate nobis et perspiciatis,
+                  natus aspernatur accusamus similique rem delectus ullam ipsam,
+                  ab ad recusandae aliquid adipisci iusto a vero laudantium
+                  itaque autem. Molestias, perferendis repellendus, enim ut
+                  similique obcaecati quibusdam, omnis quo adipisci quaerat
+                  soluta vero assumenda vel! Pariatur, dolorum voluptate error
+                  vero perspiciatis fuga odio voluptatibus. Vel, a incidunt
+                  quasi repellendus eius maxime dolorum! Tenetur doloribus id
+                  quae nihil cum numquam eveniet quod? Vitae quos animi
+                  corrupti, architecto deleniti repellendus quas quam
+                  consectetur in saepe modi sed earum nulla adipisci nostrum
+                  quae ea doloremque recusandae libero illum expedita. Voluptate
+                  harum incidunt quibusdam culpa rerum saepe consequatur velit
+                  sint consectetur nulla. Ut quasi quae nihil beatae. Voluptatem
+                  libero fugiat amet voluptatibus eum ab at deserunt quaerat
+                  iure recusandae earum, unde vel omnis, delectus rem enim
+                  quibusdam inventore qui numquam ipsum voluptas cumque ratione
+                  laborum. Delectus repudiandae cum eum, dolores dolorum
+                  mollitia eligendi asperiores cumque? Dolorum aliquid porro,
+                  modi harum necessitatibus reiciendis labore eaque magni.
+                  Beatae dolore vel recusandae veniam inventore rerum blanditiis
+                  voluptatum repellendus, in iste, iusto, impedit neque
+                  mollitia. Porro aspernatur, nihil, dolor ullam pariatur
+                  obcaecati neque voluptates magnam, similique distinctio
+                  reprehenderit ratione ipsa deleniti illo cum corrupti eum
+                  laborum officia optio consequatur quae tempora? Expedita fuga
+                  itaque eius rem corporis quisquam exercitationem error
+                  perspiciatis dignissimos alias ipsa distinctio cum adipisci
+                  aliquam fugit, libero numquam odit at eos dicta soluta iste!
+                  Ab aliquam ducimus, sit excepturi laudantium at, enim impedit
+                  possimus explicabo quia necessitatibus dignissimos illum culpa
+                  velit delectus, commodi vitae? Alias cumque dolorum sequi sit?
+                  Ducimus ut odio sequi similique hic magnam repudiandae commodi
+                  assumenda, nemo aut illo ipsa amet dolore dolorum expedita
+                  numquam pariatur accusantium incidunt enim. Quibusdam quaerat
+                  atque aspernatur facere accusamus sunt blanditiis veritatis
+                  iste praesentium assumenda expedita, ut corrupti fugiat, eos
+                  eius qui, ipsa itaque nemo. Ullam voluptatem alias atque
+                  nulla. Magni quisquam molestias temporibus placeat minima. Quo
+                  quidem placeat magnam quasi aliquam. Dignissimos reiciendis
+                  temporibus non architecto ipsum deleniti, molestiae quae
+                  corporis amet quia provident nobis deserunt molestias
+                  doloremque iusto pariatur, eum a ad. Hic non qui pariatur
+                  maxime fugit aliquid autem, consequuntur reprehenderit
+                  repellat optio. Repudiandae ducimus expedita rem minima, a
+                  minus natus eveniet necessitatibus quo commodi quidem sunt
+                  distinctio provident esse! Adipisci itaque ratione dolorum
+                  nulla voluptatem fugiat alias rem facilis asperiores molestias
+                  quibusdam, neque sunt dicta dolores aspernatur esse quisquam
+                  voluptates autem nostrum repudiandae harum? Eius reiciendis
+                  deserunt molestias quisquam ex earum maxime! Expedita dolorem
+                  cum reiciendis doloribus officiis non id doloremque, omnis
+                  quidem necessitatibus voluptates iusto quasi quia laudantium
+                  rerum, a optio tempore. Mollitia iusto reiciendis ut alias
+                  itaque dolore maiores, et animi minima. Porro aut totam alias
+                  ducimus quisquam. Dolore cum dignissimos maiores rem esse fuga
+                  rerum odit omnis iure ullam nemo necessitatibus inventore
+                  dolores perferendis, accusantium debitis non in praesentium
+                  voluptatem ipsum sunt, recusandae veritatis eos assumenda.
+                  Excepturi, ducimus illum corporis tempora distinctio quidem
+                  consectetur repudiandae sed, praesentium delectus aut porro
+                  maiores. Adipisci nemo ex a. Tempore nulla vitae, repudiandae
+                  sed corrupti fugiat quod facere praesentium. Magnam laborum
+                  unde doloribus, eos optio voluptatibus perspiciatis harum sed!
+                  Rerum, inventore eveniet consequatur quibusdam beatae
+                  voluptatibus itaque dolores adipisci ipsam non sapiente,
+                  cumque laudantium quis aspernatur aliquam distinctio ex modi,
+                  eaque exercitationem. Aliquid ducimus eos accusamus quibusdam
+                  magnam fugit, atque perspiciatis in ipsum quisquam recusandae
+                  esse. Dolorem, consequuntur facilis! Atque libero error
+                  blanditiis officia quia doloremque dolores, voluptate
+                  accusantium! Maxime mollitia ullam sit eos, rerum ea iusto
+                  necessitatibus nisi modi laborum libero rem voluptas iste
+                  consequuntur quasi enim molestiae non harum odio ratione
+                  eveniet a magnam dolores qui! Ab culpa quidem aspernatur sequi
+                  ipsam. Eos cum, officiis expedita magnam debitis tempore quis
+                  animi ea praesentium! Cumque ipsam hic temporibus animi culpa.
+                  Voluptatum voluptatem cupiditate dolorem, eius esse in debitis
+                  tenetur doloremque pariatur sequi quos, cum nostrum non, hic
+                  quasi magni odio consequatur nobis! Sequi illum dolore
+                  accusamus aperiam magni maxime deleniti adipisci reiciendis
+                  rerum, voluptatem soluta saepe suscipit similique deserunt
+                  aliquid quia nam quam repellendus error nisi accusantium
+                  ratione nobis quibusdam. Unde quas odit minima quod aspernatur
+                  alias voluptates iste fuga dignissimos. Architecto animi amet
+                  culpa voluptatum repudiandae aut. Cupiditate at dolore minus
+                  explicabo! Voluptatem hic aliquid excepturi placeat, nesciunt
+                  mollitia aperiam odio, aut ratione accusamus optio minima?
+                  Eveniet voluptates quis consectetur eius cumque ducimus,
+                  explicabo perspiciatis laboriosam possimus suscipit ut enim
+                  perferendis molestiae, maxime ad aspernatur fugiat magnam, non
+                  unde dolores! Ducimus harum magnam, consequatur consectetur
+                  tempora quae, exercitationem quasi cupiditate expedita ipsa
+                  doloribus sapiente nemo error! Adipisci cum nesciunt incidunt
+                  illum dolores atque doloremque officiis, ratione nam enim, et,
+                  delectus obcaecati consequatur minima voluptate vitae placeat.
+                  Deleniti totam quae harum, corrupti nemo, suscipit voluptatem
+                  temporibus voluptas explicabo deserunt, perferendis sit iure
+                  corporis esse consectetur non culpa vitae at. Mollitia
+                  eligendi ullam ea quasi dolorum culpa, corrupti tempora nobis
+                  quod animi, dicta quis excepturi aut nesciunt veniam iusto.
+                  Repellendus, vel assumenda labore molestiae esse similique
+                  placeat itaque dignissimos explicabo, impedit eius dolorem,
+                  incidunt saepe beatae aspernatur excepturi nesciunt. Quas est
+                  dolores beatae esse quidem voluptatibus eaque! Voluptatem unde
+                  voluptate ipsam consequuntur fugiat accusamus possimus ut,
+                  quasi non porro tempora maxime sequi! Assumenda itaque aperiam
+                  eveniet doloremque ea deleniti impedit atque, libero tempora,
+                  incidunt delectus. Eligendi, assumenda dolorum nesciunt
+                  consequatur libero tempora minima pariatur adipisci esse, vero
+                  architecto.
+                </p>
+                <span>
+                  <i class="far fa-file-code" title="View Code"></i>
+                  <a href="#">
+                    <i
+                      class="fas fa-external-link-alt"
+                      title="Visit Website"
+                    ></i
+                  ></a>
+                  <a href="#">
+                    <i class="fab fa-github" title="Visit Repository"></i
+                  ></a>
+                </span>
+              </div>
+            </section>
+            <section id="workDisplay">
+              <div id="workDisplayContent">
+                <section id="workDisplayTop" class="workDisplay-grid-items">
+                  <i class="fa fa-html5" aria-hidden="true"></i>
+                  <i class="fab fa-sass" aria-hidden="true"></i>
+                  <i class="fab fa-js-square" aria-hidden="true"></i>
+                </section>
+                <section id="workDisplayExit" class="workDisplay-grid-items">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </section>
+                <section id="workDisplayLeft" class="workDisplay-grid-items">
+                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </section>
+                <section id="workDisplayMiddle" class="workDisplay-grid-items">
+                  <select name="fileSelect" id="fileSelect">
+                    <option value="placeholder">
+                      Please Select Language Above
+                    </option>
+                    <option value="placeholder">
+                      Please Select Language Above
+                    </option>
+                    <option value="placeholder">
+                      Please Select Language Above
+                    </option>
+                    <option value="placeholder">
+                      Please Select Language Above
+                    </option>
+                    <option value="placeholder">
+                      Please Select Language Above
+                    </option>
+                  </select>
+                  <pre id="codeDisplay"></pre>
+                </section>
+                <section id="workDisplayRight" class="workDisplay-grid-items">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </section>
+                <section
+                  id="workDisplayBottom"
+                  class="workDisplay-grid-items"
+                ></section>
+              </div>
+            </section>
           </div>
         </div>
       </main>

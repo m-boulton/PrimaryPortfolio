@@ -1,6 +1,8 @@
 dev
 dist
+coverage
 node_modules
+untracked
 img
 vid
 fonts

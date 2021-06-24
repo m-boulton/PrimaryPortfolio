@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve",
+    "start": "sass --watch assets/styles/scss:assets/styles/css",
     "test": "jest"
   },
   "repository": {

@@ -1,23 +1,31 @@
-@use './variables' as *;
+@use './../variables' as *;
 
-#pageCover {
-  position: absolute;
+#workDisplay {
+  grid-area: viewer;
+  position: fixed;
   display: none;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 0vh;
   color: white;
   z-index: 20;
   transition: ease 0.3s;
-  #pageCoverContent {
+  @include desktop {
+    display: block;
+    position: sticky;
+    width: 100%;
+    height: 84vh;
+    top: 12vh;
+    margin: 4vh auto;
+  }
+  #workDisplayContent {
     position: fixed;
     display: grid;
     grid-template-areas:
       ". top exit"
       "left middle right"
-      "bottom bottom bottom";
+      ". . .";
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 1fr 14fr 1fr;
     width: 100%;
@@ -29,9 +37,15 @@
       grid-template-columns: 1fr 14fr 1fr;
     }
     @include desktop {
+      position: relative;
+      grid-template-areas:
+        "left top right"
+        "middle middle middle";
       grid-template-columns: 1fr 20fr 1fr;
+      grid-template-rows: 1fr 14fr;
+      background: none;
     }
-    .cover-grid-items {
+    .workDisplay-grid-items {
       width: 100%;
       height: 100%;
       display: flex;
@@ -42,11 +56,15 @@
         z-index: -5;
       }
     }
-    #coverTop {
+    #workDisplayTop {
+      background: rgba(0, 0, 0, 0.9);
       grid-area: top;
     }
-    #coverExit {
+    #workDisplayExit {
       grid-area: exit;
+      @include desktop {
+        display: none;
+      }
       &:hover {
         i {
           transition: ease 0.3s;
@@ -55,17 +73,18 @@
         }
       }
     }
-    #coverLeft {
+    #workDisplayLeft {
+      background: rgba(0, 0, 0, 0.9);
       grid-area: left;
       &:hover {
         i {
           transition: ease 0.3s;
-          background: rgba(129, 236, 236, 0.4);
-          box-shadow: 0 0 10rem 4rem rgba(129, 236, 236, 0.8);
+          background: rgba(129, 236, 236, 0.6);
+          box-shadow: 0 0 1rem 0.4rem rgba(129, 236, 236, 0.8);
         }
       }
     }
-    #coverMiddle {
+    #workDisplayMiddle {
       grid-area: middle;
       display: grid;
       grid-template-rows: 1fr 19fr;
@@ -85,35 +104,43 @@
         font-size: 2rem;
         line-height: 1.2em;
       }
-      select {
+      #fileSelect {
         grid-area: select;
-        width: 50%;
-        background: rgba(10, 10, 10, 1);
+        width: 80%;
+        background: $dark-transp;
         border: solid 3px rgba(10, 10, 10, 1);
         border-radius: 0.2em;
         color: $accent-light;
-        font-size: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        option {
+          font-size: 1rem;
+        }
       }
       pre {
         grid-area: code;
         width: 90%;
         height: 100%;
         background: rgba(10, 10, 10, 0.9);
-        font-size: 14rem;
+        font-size: 4rem;
       }
     }
-    #coverRight {
+    #workDisplayRight {
       grid-area: right;
+      background: rgba(0, 0, 0, 0.9);
       &:hover {
         i {
           transition: ease 0.3s;
-          background: rgba(129, 236, 236, 0.4);
-          box-shadow: 0 0 10rem 4rem rgba(129, 236, 236, 0.8);
+          background: rgba(129, 236, 236, 0.6);
+          box-shadow: 0 0 1rem 0.4rem rgba(129, 236, 236, 0.8);
         }
       }
     }
-    #coverBottom {
-      grid-area: bottom;
+    #workDisplayBottom {
+      background: rgba(0, 0, 0, 0.9);
+      @include desktop {
+        display: none;
+      }
     }
   }
 }

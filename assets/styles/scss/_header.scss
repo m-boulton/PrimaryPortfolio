@@ -20,13 +20,24 @@
       line-height: 7vw;
     }
     &:hover {
-      color: #00b894;
+      animation: color-change 3s linear infinite;
       span {
-        color: $accent-light;
+        color: inherit;
       }
     }
-    span {
-      color: $accent;
-    }
+  }
+}
+@keyframes color-change {
+  0% {
+    color: $accent;
+  }
+  33% {
+    color: $accent-off;
+  }
+  66% {
+    color: #1dd1a1;
+  }
+  100% {
+    color: $accent;
   }
 }

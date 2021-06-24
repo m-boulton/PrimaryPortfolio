@@ -2,6 +2,7 @@
 @forward './nav';
 @forward './content';
 @forward './footer';
-@forward './cover';
 @forward './contact';
-@forward './cards';
+@forward './components/cards';
+@forward './components/work-button';
+@forward './components/work-display';

@@ -1,0 +1,106 @@
+@use './../variables' as *;
+
+#workSelect {
+  grid-area: buttons;
+  // .current-viewer
+  #current {
+    background: $fade;
+    background-size: 200%;
+    animation: background-move 5s linear infinite;
+    color: white;
+    .fa-angle-down {
+      transform: rotate(180deg);
+      animation: none;
+    }
+  }
+  .work-button {
+    width: 100%;
+    padding: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.9);
+    border: 0.1rem solid rgba(20, 20, 20, 0.9);
+    margin: 0.3rem 0;
+    cursor: pointer;
+    color: $dark-off;
+    font-size: 1.8rem;
+    line-height: 1.2em;
+    .fa-angle-down {
+      animation: blink 2s linear infinite;
+    }
+    .work-button-title {
+      font-size: inherit;
+    }
+    .language-icons {
+      color: inherit;
+      i {
+        font-size: inherit;
+      }
+    }
+    .fa-angle-down {
+      font-size: 3rem;
+      justify-self: right;
+    }
+  }
+  .work-panel {
+    margin-top: -0.2em;
+    padding: 0 0.5em;
+    background: rgba(20, 20, 20, 0.9);
+    color: $light;
+    font-size: 1.4rem;
+    line-height: 1.8em;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height ease-in-out 1s;
+    ol {
+      list-style: disc;
+      padding-left: 1em;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    p {
+      padding-top: 1em;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    span {
+      float: right;
+      i {
+        font-size: 2.5rem;
+        padding: 0.2em;
+        color: $light;
+        cursor: pointer;
+      }
+      .fa-file-code {
+        animation: blink 2s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: $accent-off;
+  }
+  33% {
+    color: $accent;
+  }
+  66% {
+    color: $aqua;
+  }
+  100% {
+    color: $accent-off;
+  }
+}
+@keyframes background-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
