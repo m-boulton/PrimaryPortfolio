@@ -22,12 +22,6 @@ if (document.getElementById("buttonInputArea")) {
     .addEventListener("click", contactFormButtons, false);
 }
 
-document.querySelectorAll(".fa-file-code").forEach((item) => {
-  item.addEventListener("click", (e) => {
-    document.getElementById("workDisplay").style.display = "block";
-  });
-});
-
 // Click handlers for code viewer pane
 if (document.querySelector("#workDisplayContent")) {
   document
