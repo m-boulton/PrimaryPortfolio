@@ -5,8 +5,6 @@ import workLoader from "./workPane/workLoader.js";
 // Page load event handlers
 
 window.addEventListener("DOMContentLoaded", async () => {
-  // injects svg elements
-  SVGInject(document.querySelectorAll("img.svg-injectable"));
   // sets brightness of the background
   document.getElementById("background").style.filter = "brightness(100%)";
   if (window.location.pathname.includes("Work")) {
