@@ -16,7 +16,6 @@
   }
   .work-button {
     width: 100%;
-    padding: 0.1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +25,7 @@
     cursor: pointer;
     color: $dark-off;
     fill: $dark-off;
-    font-size: 1.8rem;
+    font-size: 2rem;
     h3:first-letter {
       text-transform: capitalize;
     }
@@ -37,15 +36,15 @@
       font-size: inherit;
     }
     .language-icons {
+      display: flex;
+      font-size: inherit;
       color: inherit;
       fill: inherit;
-      i {
-        font-size: inherit;
-      }
       svg {
+        margin: 0 0.2em;
         height: 1em;
         width: 1em;
-        font-size: 1.8rem;
+        font-size: inherit;
         fill: inherit;
       }
     }
@@ -64,7 +63,7 @@
     line-height: 1.8em;
     overflow: hidden;
     max-height: 0;
-    transition: max-height ease-in-out 0.5s;
+    transition: max-height ease-in-out 1s;
     ol {
       list-style: disc;
       padding-left: 1em;

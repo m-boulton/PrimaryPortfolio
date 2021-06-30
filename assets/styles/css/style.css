@@ -580,7 +580,6 @@
 }
 #workSelect .work-button {
   width: 100%;
-  padding: 0.1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -590,7 +589,7 @@
   cursor: pointer;
   color: #636e72;
   fill: #636e72;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 #workSelect .work-button h3:first-letter {
   text-transform: capitalize;
@@ -602,16 +601,16 @@
   font-size: inherit;
 }
 #workSelect .work-button .language-icons {
+  display: flex;
+  font-size: inherit;
   color: inherit;
   fill: inherit;
 }
-#workSelect .work-button .language-icons i {
-  font-size: inherit;
-}
 #workSelect .work-button .language-icons svg {
+  margin: 0 0.2em;
   height: 1em;
   width: 1em;
-  font-size: 1.8rem;
+  font-size: inherit;
   fill: inherit;
 }
 #workSelect .work-button .fa-angle-down {
@@ -627,7 +626,7 @@
   line-height: 1.8em;
   overflow: hidden;
   max-height: 0;
-  transition: max-height ease-in-out 0.5s;
+  transition: max-height ease-in-out 1s;
 }
 #workSelect .work-panel ol {
   list-style: disc;

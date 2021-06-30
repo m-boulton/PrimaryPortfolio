@@ -83,7 +83,7 @@ function iconBuilder(keywordsArray) {
         languages.push(icon);
       }
     });
-    return languages.join(" ");
+    return languages.join("");
   }
   return "";
 }
@@ -119,8 +119,7 @@ function workButtonsBuilder(workbuttonArray) {
     <div class="work-panel">
                 ${descriptionBuilder(project.readme)}
                 <span>
-                <a href="#">
-                <img src="./assets/icons/code.svg" class="svg-injectable blink" title="Show Code Examples" /></a>
+                <img src="./assets/icons/code.svg" class="svg-injectable blink" title="Show Code Examples" />
                   <a href="${project.homepage}">
                   <img src="./assets/icons/link.svg" class="svg-injectable" title="Visit Website" /></a>
                   <a href="${project.github}">
