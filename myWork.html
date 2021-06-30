@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/css/reset.css" />
     <link rel="stylesheet" href="./assets/styles/css/style.css" />
+    <link rel="stylesheet" href="./assets/styles/css/prism.css" />
     <script
       src="https://kit.fontawesome.com/1916b5f59e.js"
       crossorigin="anonymous"
@@ -367,7 +368,11 @@
                       Please Select Language Above
                     </option>
                   </select>
-                  <pre id="codeDisplay"></pre>
+                  <pre id="codeDisplay">
+                    <code class="language-js">
+                      // Loading Environment Variables\r\nrequire(\"dotenv\").config({ path: `/var/www/env/.env` });\r\nrequire(\"dotenv\").config();\r\nconsole.log(`*   Using ${process.env.NODE_ENV} Environment Variables   *`);\r\nconst {\r\n  CORS_AMD: corsProduction,\r\n  CORS_DEV: corsDev,\r\n  AMD_PORT: port,\r\n  POST_CRED: postPassword,\r\n} = process.env;\r\nconst corsAddress = process.env.DEV ? corsDev : corsProduction;\r\n\r\n// Dependancies\r\nconst express = require(\"express\");\r\nconst app = express();\r\n// const cors = require(\"cors\");\r\n\r\n// Middleware ---------------------------------------------------------------------------------------\r\n// app.use(cors());\r\napp.use(express.static(\"public\"));\r\napp.use(express.urlencoded({ extended: true }));\r\napp.use(express.json({ limit: \"1mb\" }));\r\napp.use((req, res, next) => {\r\n  // #FIXME--------------------------------------------------------------\r\n  // replace cors address header to corsAddress when pushed to production\r\n\r\n  res.header(\"Access-Control-Allow-Origin\", \"*\");\r\n  res.header(\"Access-Control-Allow-Methods\", \"GET,PUT,POST,DELETE\");\r\n  res.header(\"Access-Control-Allow-Headers\", \"Content-Type\");\r\n  next();\r\n});\r\n// Checks the request body for the password so that you can post to the database\r\napp.use((req, res, next) => {\r\n  req.body.auth = false;\r\n  req.body.password === postPassword\r\n    ? (req.body.auth = true)\r\n    : (req.body.auth = false);\r\n  next();\r\n});\r\n\r\n// Import Routes\r\n// amd\r\nconst amdNavRoutes = require(\"./assets/routes/amdNavRoutes\");\r\nconst amdContentRoutes = require(\"./assets/routes/amdContentRoutes\");\r\nconst amdSpecRoutes = require(\"./assets/routes/amdSpecRoutes\");\r\n\r\n// Routes --------------------------------------------------------------------------------------------\r\n\r\n// amd\r\n// nginx consumes the /amd path in port transfer\r\napp.use(\"/amd/nav\", amdNavRoutes);\r\napp.use(\"/amd/content\", amdContentRoutes);\r\napp.use(\"/amd/spec\", amdSpecRoutes);\r\n\r\n// root\r\napp.get(\"/\", (req, res) => {\r\n  res.json({ message: `this is the root api` });\r\n});\r\n\r\n// Port Listeners -----------------------------------------------------------------------------------\r\n//\r\napp.listen(port, (err) => {\r\n  if (err) {\r\n    return console.log(\"ERROR \", err);\r\n  }\r\n  console.log(`*** Listening on HTTP port ${port} ***`);\r\n  console.log(`^^^ Accepting request from ${corsAddress}^^^`);\r\n});\r\n
+                    </code>
+                  </pre>
                 </section>
                 <section id="workDisplayRight" class="workDisplay-grid-items">
                   <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -407,5 +412,6 @@
       </footer>
     </div>
     <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/prism.js"></script>
   </body>
 </html>

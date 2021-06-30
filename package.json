@@ -1,8 +1,9 @@
 {
-  "name": "primaryportfolio",
+  "name": "mboulton_portfolio_display_website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "Website that displays information about Mboulton.com's developer and also shows their work.",
+  "homepage": "https://mboulton.com",
+  "main": "assets/js/main.js",
   "scripts": {
     "build": "webpack",
     "start": "sass --watch assets/styles/scss:assets/styles/css",
@@ -10,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@mboulton.com:/srv/git/primary.git"
+    "url": "https://github.com/m-boulton/PrimaryPortfolio.git"
   },
   "author": "",
   "license": "ISC",

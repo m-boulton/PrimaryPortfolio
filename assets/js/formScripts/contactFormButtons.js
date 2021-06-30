@@ -17,8 +17,12 @@ async function contactFormButtons(e) {
       document.getElementById("formMessageOutput").textContent =
         "Submitting form...";
       let response = await formSubmit(formData);
-
+      if (response.message === "ERROR")
+        return (document.getElementById(
+          "formMessageOutput"
+        ).textContent = `${response.error}`);
       // returns out of the function and renders the server response (obj.data)
+      await formReset();
       return (document.getElementById(
         "formMessageOutput"
       ).textContent = `${response.data}`);

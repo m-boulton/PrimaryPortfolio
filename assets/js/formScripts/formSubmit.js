@@ -23,13 +23,14 @@ async function formSubmit(formData) {
       const resData = await res.json();
       //   returns the message from the server about form submit
       return resData;
-    } else {
-      // logs any http responses that arent succeeding
-      console.log("HTTP-Error: " + res.status);
     }
-  } catch (error) {
+    // logs any http responses that arent succeeding
+    console.log("HTTP-Error: " + res.status);
+    throw `HTTP-Error: ${res.status}`;
+  } catch (err) {
     //   logs all errors with posting to the server
-    console.log(`There was a catch error in formSubmit.js: ${error}`);
+    console.log(`There was a catch error in formSubmit.js: ${err}`);
+    return { message: "ERROR", error: err };
   }
 }
 
