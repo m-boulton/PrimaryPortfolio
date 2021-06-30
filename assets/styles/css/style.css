@@ -572,8 +572,9 @@
   background-size: 200%;
   animation: background-move 5s linear infinite;
   color: white;
+  fill: white;
 }
-#workSelect #current .fa-angle-down {
+#workSelect #current .angle-down {
   transform: rotate(180deg);
   animation: none;
 }
@@ -588,10 +589,13 @@
   margin: 0.3rem 0;
   cursor: pointer;
   color: #636e72;
+  fill: #636e72;
   font-size: 1.8rem;
-  line-height: 1.2em;
 }
-#workSelect .work-button .fa-angle-down {
+#workSelect .work-button h3:first-letter {
+  text-transform: capitalize;
+}
+#workSelect .work-button .angle-down {
   animation: blink 2s linear infinite;
 }
 #workSelect .work-button .work-button-title {
@@ -599,9 +603,16 @@
 }
 #workSelect .work-button .language-icons {
   color: inherit;
+  fill: inherit;
 }
 #workSelect .work-button .language-icons i {
   font-size: inherit;
+}
+#workSelect .work-button .language-icons svg {
+  height: 1em;
+  width: 1em;
+  font-size: 1.8rem;
+  fill: inherit;
 }
 #workSelect .work-button .fa-angle-down {
   font-size: 3rem;
@@ -632,28 +643,26 @@
 #workSelect .work-panel span {
   float: right;
 }
-#workSelect .work-panel span i {
+#workSelect .work-panel span svg {
   font-size: 2.5rem;
   padding: 0.2em;
+  fill: #b2bec3;
   color: #b2bec3;
   cursor: pointer;
-}
-#workSelect .work-panel span .fa-file-code {
-  animation: blink 2s linear infinite;
 }
 
 @keyframes blink {
   0% {
-    color: #5f27cd;
+    fill: #5f27cd;
   }
   33% {
-    color: #0984e3;
+    fill: #0984e3;
   }
   66% {
-    color: #1dd1a1;
+    fill: #1dd1a1;
   }
   100% {
-    color: #5f27cd;
+    fill: #5f27cd;
   }
 }
 @keyframes background-move {

@@ -1,20 +1,21 @@
-// check session storage for buttonsdata and return or fetch datafrom database
-
-// on dom load fetch db data for first project with name as query
-// receive header, paragraph, link, github, picture
-// first poject expands and others collapse
-// click event to expand and load code from readfilesync
-//
 import { apiUrl } from "./../globalVariable.js";
 
 async function fetchProjectData() {
-  const data = await fetch(`${apiUrl}/portfolio/projectList`);
-  if (!data.message || !data.error) throw "cannot fetch data from database";
-  data.message === "PROJECTLIST" ? data.data : data.error;
+  const res = await fetch(`${apiUrl}/projectList`);
+  const data = await res.json();
+  window.sessionStorage.setItem("projectsObj", JSON.stringify(data));
+  if (data.message === "ERROR")
+    throw `cannot fetch data from database : ${data.error}`;
+  if (data.message === "PROJECTLIST") return data.data;
+  return data.error;
 }
 
-function getProjectData() {}
-// const localData = sessionStorage.getItem("projectsObj");
-// localData ? localData : fetchProjectData();
+function getProjectData() {
+  if (window.sessionStorage.getItem("projectsObj")) {
+    const storageJson = window.sessionStorage.getItem("projectsObj");
+    return JSON.parse(storageJson);
+  }
+  return fetchProjectData();
+}
 
 export default getProjectData;

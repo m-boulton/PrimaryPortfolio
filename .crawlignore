@@ -4,6 +4,7 @@ coverage
 node_modules
 untracked
 img
+icons
 vid
 fonts
 files

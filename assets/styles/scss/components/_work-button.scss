@@ -8,7 +8,8 @@
     background-size: 200%;
     animation: background-move 5s linear infinite;
     color: white;
-    .fa-angle-down {
+    fill: white;
+    .angle-down {
       transform: rotate(180deg);
       animation: none;
     }
@@ -24,9 +25,12 @@
     margin: 0.3rem 0;
     cursor: pointer;
     color: $dark-off;
+    fill: $dark-off;
     font-size: 1.8rem;
-    line-height: 1.2em;
-    .fa-angle-down {
+    h3:first-letter {
+      text-transform: capitalize;
+    }
+    .angle-down {
       animation: blink 2s linear infinite;
     }
     .work-button-title {
@@ -34,8 +38,15 @@
     }
     .language-icons {
       color: inherit;
+      fill: inherit;
       i {
         font-size: inherit;
+      }
+      svg {
+        height: 1em;
+        width: 1em;
+        font-size: 1.8rem;
+        fill: inherit;
       }
     }
     .fa-angle-down {
@@ -67,14 +78,12 @@
     }
     span {
       float: right;
-      i {
+      svg {
         font-size: 2.5rem;
         padding: 0.2em;
+        fill: $light;
         color: $light;
         cursor: pointer;
-      }
-      .fa-file-code {
-        animation: blink 2s linear infinite;
       }
     }
   }
@@ -82,16 +91,16 @@
 
 @keyframes blink {
   0% {
-    color: $accent-off;
+    fill: $accent-off;
   }
   33% {
-    color: $accent;
+    fill: $accent;
   }
   66% {
-    color: $aqua;
+    fill: $aqua;
   }
   100% {
-    color: $accent-off;
+    fill: $accent-off;
   }
 }
 @keyframes background-move {

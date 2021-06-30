@@ -1,6 +1,16 @@
 {
   "name": "mboulton_portfolio_display_website",
   "version": "1.0.0",
+  "keywords": [
+    "4",
+    "html",
+    "javascript",
+    "css",
+    "sass",
+    "webpack",
+    "jest",
+    "dotenv"
+  ],
   "description": "Website that displays information about Mboulton.com's developer and also shows their work.",
   "homepage": "https://mboulton.com",
   "main": "assets/js/main.js",

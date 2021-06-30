@@ -1,0 +1,13 @@
+<svg
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true"
+focusable="false" 
+title="Node Mailer"   
+alt="Node Mailer icon"
+id="nodemailer" 
+class="fa-nodemailer" 
+width="1em"
+height="1em"
+preserveAspectRatio="xMidYMid meet"
+viewBox="0 0 22 18"><g fill="#000" fill-opacity="0" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)"><path d="M2 0h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0z"/><path d="M20 2L10 9 0 2"/></g>
+</svg>
