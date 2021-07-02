@@ -1,4 +1,4 @@
-// import expandProject from "./expandProject.js";
+import workDisplayLoader from "./workDisplayLoader.js";
 
 function collapse(btn, sibling) {
   btn.removeAttribute("id");
@@ -24,6 +24,9 @@ function workButtonsEvents() {
           if (btn.id === "current") return collapse(btn, sibling);
           btn.id = "current";
           sibling.style.maxHeight = sibling.scrollHeight + "px";
+          workDisplayLoader(
+            btn.firstChild.nextElementSibling.innerHTML.split(" ").join("_")
+          );
         }
       });
     });
@@ -31,5 +34,3 @@ function workButtonsEvents() {
 }
 
 export default workButtonsEvents;
-
-//   e.stopPropagation();

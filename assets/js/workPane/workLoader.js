@@ -4,7 +4,7 @@ import workButtonsEvents from "./workButtonsEvents.js";
 
 async function workLoader() {
   // get project list information from session storage or api call
-  const databaseData = await getProjectData();
+  const databaseData = await getProjectData("projectList");
 
   // populate buttons with database data
   const workSection = await workButtonsBuilder(databaseData);

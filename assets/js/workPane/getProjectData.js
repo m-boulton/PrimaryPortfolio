@@ -1,28 +1,32 @@
 import { apiUrl } from "./../globalVariable.js";
 
-async function fetchProjectData() {
+async function fetchProjectData(key) {
+  const apiEndpoint =
+    key === "projectList"
+      ? `${apiUrl}/projectList`
+      : `${apiUrl}/codeFiles?project=${key}`;
   // fetching projects data from api
-  const res = await fetch(`${apiUrl}/projectList`);
+  const res = await fetch(`${apiEndpoint}`);
   const data = await res.json();
 
   // saving projects data to sessionstorage
-  window.sessionStorage.setItem("projectsObj", JSON.stringify(data.data));
+  window.sessionStorage.setItem(key, JSON.stringify(data.data));
+
+  // return error data if error occured
+  if (data.message === "ERROR") return data.error;
 
   // return data
-  if (data.message === "PROJECTLIST") return data.data;
-
-  // return error data
-  if (data.message === "ERROR") return data.error;
+  return data.data;
 }
 
-function getProjectData() {
+function getProjectData(query) {
   // checking sessionstorage for data
-  if (window.sessionStorage.getItem("projectsObj")) {
-    const storageJson = window.sessionStorage.getItem("projectsObj");
+  if (window.sessionStorage.getItem(query)) {
+    const storageJson = window.sessionStorage.getItem(query);
     return JSON.parse(storageJson);
   }
   // calling a fetch request and returning the data
-  return fetchProjectData();
+  return fetchProjectData(query);
 }
 
 export default getProjectData;

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/css/reset.css" />
     <link rel="stylesheet" href="./assets/styles/css/style.css" />
-    <link rel="stylesheet" href="./assets/styles/css/prism.css" />
+    <link
+      rel="stylesheet"
+      href="assets/styles/prettify/skins/vibrant-ink.css"
+    />
     <script
       src="https://kit.fontawesome.com/1916b5f59e.js"
       crossorigin="anonymous"
@@ -104,8 +107,8 @@
                       Please Select Language Above
                     </option>
                   </select>
-                  <pre id="codeDisplay">
-                    <code class="language-js"></code>
+                  <pre id="codeDisplay" class="prettyprint">
+                    <!-- insert code examples here -->
                   </pre>
                 </section>
                 <section id="workDisplayRight" class="workDisplay-grid-items">
@@ -147,6 +150,6 @@
     </div>
     <script src="./assets/js/svg-inject.min.js"></script>
     <script type="module" src="./assets/js/main.js"></script>
-    <script src="./assets/js/prism.js"></script>
+    <script src="./assets/styles/prettify/prettify.js"></script>
   </body>
 </html>

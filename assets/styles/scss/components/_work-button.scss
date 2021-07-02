@@ -26,14 +26,11 @@
     color: $dark-off;
     fill: $dark-off;
     font-size: 2rem;
-    h3:first-letter {
-      text-transform: capitalize;
-    }
     .angle-down {
       animation: blink 2s linear infinite;
     }
-    .work-button-title {
-      font-size: inherit;
+    .work-button-title::first-letter {
+      text-transform: capitalize;
     }
     .language-icons {
       display: flex;
