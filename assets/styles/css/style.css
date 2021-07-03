@@ -793,8 +793,12 @@
   font-size: 1.5rem;
   line-height: 1.5em;
 }
-#workDisplay #workDisplayContent #workDisplayMiddle #fileSelect option {
+#workDisplay #workDisplayContent #workDisplayMiddle #fileSelect optgroup {
   font-size: inherit;
+  background: #282828;
+}
+#workDisplay #workDisplayContent #workDisplayMiddle #fileSelect optgroup option {
+  background: #141414;
 }
 #workDisplay #workDisplayContent #workDisplayMiddle pre {
   grid-area: code;

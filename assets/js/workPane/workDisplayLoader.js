@@ -15,10 +15,14 @@ function selectBuilder(currentProject) {
     (item) => item.fileType === "scss"
   );
   const jsProjects = currentProject.filter((item) => item.fileType === "js");
+  const jsonProjects = currentProject.filter(
+    (item) => item.fileType === "json"
+  );
   const etcProjects = currentProject.filter(
     (item) =>
       item.fileType !== "html" &&
       item.fileType !== "scss" &&
+      item.fileType !== "json" &&
       item.fileType !== "js"
   );
   const split = [
@@ -26,6 +30,7 @@ function selectBuilder(currentProject) {
     ["SASS", scssProjects],
     ["Javascript", jsProjects],
     ["ETC...", etcProjects],
+    ["JSON", jsonProjects],
   ];
   return split.map((item) => optionBuilder(item)).join("");
 }
@@ -35,12 +40,17 @@ async function workDisplayLoader(projectName) {
   const projectSelect = await selectBuilder(current);
   //
   function fileSelector(event) {
-    const selected = event.target.value;
     const codeDisplay = current.find(
       (item) => item.fileName === event.target.value
     );
+    const innerData =
+      codeDisplay.fileType === "html"
+        ? codeDisplay.data.replaceAll("<", "&lt").replaceAll(">", "&gt")
+        : codeDisplay.data;
     document.getElementById("codeDisplay").classList.remove("prettyprinted");
-    document.getElementById("codeDisplay").innerHTML = codeDisplay.data;
+    document.getElementById(
+      "codeDisplay"
+    ).innerHTML = `<code>${innerData}</code>`;
 
     // prettify injected code
     prettyPrint();

@@ -115,8 +115,12 @@
         color: $accent-light;
         font-size: 1.5rem;
         line-height: 1.5em;
-        option {
+        optgroup {
           font-size: inherit;
+          background: rgba(40, 40, 40, 1);
+          option {
+            background: rgba(20, 20, 20, 1);
+          }
         }
       }
       pre {
