@@ -15,7 +15,7 @@ async function formSubmit(formData) {
   };
   try {
     //   post's form to server
-    const res = await fetch(`${apiUrl}/portfolio/contact`, options);
+    const res = await fetch(`${apiUrl}/contact`, options);
 
     // checking for a valid http response
     if (res.ok) {
