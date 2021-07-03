@@ -777,14 +777,14 @@
 }
 @media (min-width: 1024px) {
   #workDisplay #workDisplayContent #workDisplayMiddle {
-    grid-template-rows: 2.5rem 75vh 2.5rem;
+    grid-template-rows: 4rem 70vh 2rem;
     font-size: 2rem;
     line-height: 1.2em;
   }
 }
 #workDisplay #workDisplayContent #workDisplayMiddle #fileSelect {
   grid-area: select;
-  width: 80%;
+  width: 95%;
   height: 2.5rem;
   background: rgba(45, 52, 54, 0.8);
   border: solid 3px #0a0a0a;
@@ -798,16 +798,17 @@
 }
 #workDisplay #workDisplayContent #workDisplayMiddle pre {
   grid-area: code;
-  width: 90%;
+  width: 95%;
   height: 100%;
   overflow-y: scroll;
   background: rgba(20, 20, 20, 0.9);
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5em;
 }
 #workDisplay #workDisplayContent #workDisplayMiddle pre code {
-  font-size: 1.4rem;
+  font-size: inherit;
   line-height: inherit;
+  overflow-wrap: break-word;
 }
 #workDisplay #workDisplayContent #workDisplayRight {
   grid-area: right;
