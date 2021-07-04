@@ -110,8 +110,13 @@
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 0;
+  margin-bottom: 5rem;
   min-height: 92vh;
+}
+@media (min-width: 1024px) {
+  #mainHome {
+    margin-bottom: 0;
+  }
 }
 #mainHome #contentContainer {
   margin: 1rem;
@@ -262,7 +267,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr 7fr 3fr;
   width: 86vw;
-  margin-bottom: 6vh;
   min-height: 70vh;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -375,6 +379,7 @@
   #contactForm #buttonInputArea #buttonInputs {
     margin-right: 1rem;
     width: calc(100% - 1rem);
+    padding-bottom: 1em;
   }
 }
 #contactForm #buttonInputArea #buttonInputs input {
@@ -423,6 +428,68 @@
   grid-area: response;
   font-size: 1.6rem;
   line-height: 1.2em;
+}
+
+#formMessageCover {
+  display: none;
+  position: absolute;
+  z-index: 16;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#formMessageCover .border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+#formMessageCover .border-gradient-purple {
+  border-image-source: linear-gradient(135deg, #1dd1a1, #74b9ff, #5f27cd);
+}
+#formMessageCover #formMessageOutput {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: " message message message " ".  button .";
+  position: absolute;
+  color: red;
+  top: 42vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0.6em;
+  text-align: center;
+  width: 80vw;
+  height: 16vh;
+  background: #2d3436;
+  font-size: 1.8rem;
+}
+@media (min-width: 1024px) {
+  #formMessageCover #formMessageOutput {
+    width: 40vw;
+  }
+}
+#formMessageCover #formMessageOutput #formMessageText {
+  grid-area: message;
+  color: #b2bec3;
+}
+#formMessageCover #formMessageOutput #formMessageButton {
+  grid-area: button;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  color: rgba(0, 206, 201, 0.9);
+  background: #2d3436;
+  font-weight: 600;
+  transition: ease 0.4s;
+  box-shadow: 0px 0px 8px 8px rgba(0, 206, 201, 0.6);
+}
+#formMessageCover #formMessageOutput #formMessageButton:hover {
+  box-shadow: 0px 0px 12px 12px rgba(0, 206, 201, 0.8);
 }
 
 #workCards {

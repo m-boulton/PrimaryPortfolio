@@ -15,4 +15,6 @@ prettify
 .env
 .gitignore
 .prettierignore
+svg-inject.js
+svg-inject.min.js
 package-lock.json
