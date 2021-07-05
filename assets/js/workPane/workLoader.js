@@ -1,5 +1,5 @@
 import getProjectData from "./getProjectData.js";
-import workButtonsBuilder from "./workButtonsBuilder.js";
+import workPanelBuilder from "./workPanelBuilder.js";
 import workButtonsEvents from "./workButtonsEvents.js";
 
 async function workLoader() {
@@ -7,7 +7,7 @@ async function workLoader() {
   const databaseData = await getProjectData("projectList");
 
   // populate buttons with database data
-  const workSection = await workButtonsBuilder(databaseData);
+  const workSection = await workPanelBuilder(databaseData);
 
   // insert button markup to DOM
   document.getElementById("workSelect").innerHTML = workSection;

@@ -1,6 +1,6 @@
 import descriptionBuilder from "./descriptionBuilder.js";
 
-function workButtonsBuilder(workbuttonArray) {
+function workPanelBuilder(workbuttonArray) {
   const inner = [];
   if (Array.isArray(workbuttonArray)) {
     workbuttonArray.forEach((project) => {
@@ -11,4 +11,4 @@ function workButtonsBuilder(workbuttonArray) {
   return inner.join(" ");
 }
 
-export default workButtonsBuilder;
+export default workPanelBuilder;
