@@ -89,7 +89,6 @@ function iconBuilder(keywordsArray) {
 }
 
 function descriptionBuilder(markdownText) {
-  // FIXME rebuild this function
   const htmlText = markdownText
     .replace(/---$/gim, "<hr>")
     .replace(/^### (.*$)/gim, "<h3>$1</h3>")
@@ -119,7 +118,6 @@ function workButtonsBuilder(workbuttonArray) {
       <img src="./assets/icons/angle-down.svg" class="svg-injectable angle-down" title="Expand Project" />
     </button>
     <div class="work-panel">
-                ${descriptionBuilder(project.readme)}
                 <span>
                 <img src="./assets/icons/code.svg" class="svg-injectable blink file-code" title="Show Code Examples" />
                   <a href="${project.homepage}">
@@ -127,6 +125,7 @@ function workButtonsBuilder(workbuttonArray) {
                   <a href="${project.github}">
                   <img src="./assets/icons/github.svg" class="svg-injectable" title="Visit Github Repo" /></a>
                 </span>
+                ${descriptionBuilder(project.readme)}
               </div>
       `;
       inner.push(html);
