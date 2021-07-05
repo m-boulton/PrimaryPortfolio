@@ -692,6 +692,18 @@
   max-height: 0;
   transition: max-height ease-in-out 1s;
 }
+#workSelect .work-panel h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+#workSelect .work-panel h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+#workSelect .work-panel h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
 #workSelect .work-panel ol {
   list-style: disc;
   padding-left: 1em;
@@ -716,7 +728,7 @@
 }
 #workSelect .work-panel span svg {
   font-size: 4rem;
-  padding: 0.2em;
+  padding: 0.5rem;
   fill: #b2bec3;
   color: #b2bec3;
   cursor: pointer;

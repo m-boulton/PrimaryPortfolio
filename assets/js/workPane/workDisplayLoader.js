@@ -58,7 +58,6 @@ async function workDisplayLoader(projectName) {
   document
     .getElementById("fileSelect")
     .removeEventListener("input", fileSelector);
-  // FIXME not removing event listener
   document.getElementById("fileSelect").innerHTML = projectSelect;
   document.getElementById("fileSelect").addEventListener("input", fileSelector);
 }
