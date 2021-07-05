@@ -24,6 +24,8 @@ function workButtonsEvents() {
           if (btn.id === "current") return collapse(btn, sibling);
           btn.id = "current";
           sibling.style.maxHeight = sibling.scrollHeight + "px";
+          document.getElementById("noticeLeft").style.display = "none";
+          document.getElementById("noticeAbove").style.display = "block";
           workDisplayLoader(
             btn.firstChild.nextElementSibling.innerHTML.split(" ").join("_")
           );

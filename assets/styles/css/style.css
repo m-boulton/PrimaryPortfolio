@@ -111,7 +111,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 5rem;
-  min-height: 92vh;
+  min-height: calc(92vh - 5rem);
 }
 @media (min-width: 1024px) {
   #mainHome {
@@ -267,7 +267,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr 7fr 3fr;
   width: 86vw;
-  min-height: 70vh;
+  min-height: 81vh;
   padding: 1rem;
   border-radius: 0.5rem;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), #141414);
@@ -706,8 +706,16 @@
 #workSelect .work-panel span {
   float: right;
 }
+#workSelect .work-panel span .blink {
+  animation: blink 2s linear infinite;
+}
+@media (min-width: 1024px) {
+  #workSelect .work-panel span .blink {
+    display: none;
+  }
+}
 #workSelect .work-panel span svg {
-  font-size: 2.5rem;
+  font-size: 4rem;
   padding: 0.2em;
   fill: #b2bec3;
   color: #b2bec3;
@@ -844,7 +852,7 @@
 }
 @media (min-width: 1024px) {
   #workDisplay #workDisplayContent #workDisplayMiddle {
-    grid-template-rows: 4rem 70vh 2rem;
+    grid-template-rows: 5rem 70vh 2rem;
     font-size: 2rem;
     line-height: 1.2em;
   }
@@ -852,12 +860,12 @@
 #workDisplay #workDisplayContent #workDisplayMiddle #fileSelect {
   grid-area: select;
   width: 95%;
-  height: 2.5rem;
+  height: 1.5em;
   background: rgba(45, 52, 54, 0.8);
   border: solid 3px #0a0a0a;
   border-radius: 0.2em;
   color: #74b9ff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.5em;
 }
 #workDisplay #workDisplayContent #workDisplayMiddle #fileSelect optgroup {
@@ -880,6 +888,33 @@
   font-size: inherit;
   line-height: inherit;
   overflow-wrap: break-word;
+}
+#workDisplay #workDisplayContent #workDisplayMiddle pre #noticeLeft {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: arial;
+  color: #5f27cd;
+}
+@media (min-width: 1024px) {
+  #workDisplay #workDisplayContent #workDisplayMiddle pre #noticeLeft {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+#workDisplay #workDisplayContent #workDisplayMiddle pre #noticeAbove {
+  text-align: center;
+  font-size: 2rem;
+  font-family: arial;
+  font-weight: 400;
+  color: #5f27cd;
+  display: none;
+}
+@media (min-width: 1024px) {
+  #workDisplay #workDisplayContent #workDisplayMiddle pre #noticeAbove {
+    font-size: 3rem;
+    font-weight: 600;
+  }
 }
 #workDisplay #workDisplayContent #workDisplayRight {
   grid-area: right;

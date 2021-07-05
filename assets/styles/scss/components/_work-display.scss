@@ -101,19 +101,19 @@
         line-height: 1.2em;
       }
       @include desktop {
-        grid-template-rows: 4rem 70vh 2rem;
+        grid-template-rows: 5rem 70vh 2rem;
         font-size: 2rem;
         line-height: 1.2em;
       }
       #fileSelect {
         grid-area: select;
         width: 95%;
-        height: 2.5rem;
+        height: 1.5em;
         background: $dark-transp;
         border: solid 3px rgba(10, 10, 10, 1);
         border-radius: 0.2em;
         color: $accent-light;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         line-height: 1.5em;
         optgroup {
           font-size: inherit;
@@ -135,6 +135,29 @@
           font-size: inherit;
           line-height: inherit;
           overflow-wrap: break-word;
+        }
+        #noticeLeft {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 400;
+          font-family: arial;
+          color: $accent-off;
+          @include desktop {
+            font-size: 3rem;
+            font-weight: 600;
+          }
+        }
+        #noticeAbove {
+          text-align: center;
+          font-size: 2rem;
+          font-family: arial;
+          font-weight: 400;
+          color: $accent-off;
+          display: none;
+          @include desktop {
+            font-size: 3rem;
+            font-weight: 600;
+          }
         }
       }
     }
