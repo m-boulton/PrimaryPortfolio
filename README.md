@@ -23,9 +23,8 @@
 
 The implementation of this website was of the highest priority since it was to be sent to prospective employers as a way to display my capabilties in coding
 
-Initially it was going to be a simple static display page but in order to increase its scalability as more projects would eventually be added, the implementation of a Backend server was added to acquire current project file data and serve it to the website.
 
-The priority of this project currently is to
+Initially it was going to be a simple static display page but in order to increase its scalability as more projects would eventually be added, the implementation of a Backend server was added to acquire current project file data and serve it to the website.
 
 ---
 
@@ -58,3 +57,5 @@ The priority of this project currently is to
 > `formSubmit.js`
 
 - This file POST's the contact form data to the server with REST API JSON wrapped in a try/catch for error handling and returns any errors for displaying in the DOM.
+
+
