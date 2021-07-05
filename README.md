@@ -1,3 +1,5 @@
+
+
 # Portfolio Website for Mboulton.com
 
 ---
@@ -43,20 +45,16 @@ The priority of this project currently is to
 
 ## Notable Files
 
-`contactFormButtons.js`
+> `contactFormButtons.js`
 
 - This file is the main entypoint for the contact form, Asynchronously builds, validates, and submits the contact form, then it renders an output to the DOM.
 
->
 
-`formValidate.js`
+> `formValidate.js`
 
 - This file validates the input fields of the contact form using RegEx and returns an error message or true if it passes.
 
->
 
-`formSubmit.js`
+> `formSubmit.js`
 
 - This file POST's the contact form data to the server with REST API JSON wrapped in a try/catch for error handling and returns any errors for displaying in the DOM.
-
->
