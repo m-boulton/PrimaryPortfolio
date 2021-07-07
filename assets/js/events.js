@@ -1,6 +1,6 @@
-import workDisplayClicks from "./workDisplayClicks.js";
 import contactFormButtons from "./formScripts/contactFormButtons.js";
 import workLoader from "./workPane/workLoader.js";
+import workDisplayClicks from "./workpane/workDisplayClicks.js";
 
 // Page load event handlers
 
@@ -24,8 +24,5 @@ if (document.getElementById("buttonInputArea")) {
 
 // Click handlers for code viewer pane
 if (document.querySelector("#workDisplayContent")) {
-  document
-    // sends all clicks under the code viewer pane to workDisplayClicks function
-    .querySelector("#workDisplayContent")
-    .addEventListener("click", workDisplayClicks, false);
+  workDisplayClicks();
 }

@@ -113,7 +113,7 @@
         border: solid 3px rgba(10, 10, 10, 1);
         border-radius: 0.2em;
         color: $accent-light;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         line-height: 1.5em;
         optgroup {
           font-size: inherit;
@@ -129,8 +129,11 @@
         height: 100%;
         overflow-y: scroll;
         background: rgba(20, 20, 20, 0.9);
-        font-size: 1.4rem;
+        font-size: 1rem;
         line-height: 1.5em;
+        @include desktop {
+          font-size: 1.4rem;
+        }
         code {
           font-size: inherit;
           line-height: inherit;

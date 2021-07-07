@@ -877,7 +877,7 @@
   border: solid 3px #0a0a0a;
   border-radius: 0.2em;
   color: #74b9ff;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   line-height: 1.5em;
 }
 #workDisplay #workDisplayContent #workDisplayMiddle #fileSelect optgroup {
@@ -893,8 +893,13 @@
   height: 100%;
   overflow-y: scroll;
   background: rgba(20, 20, 20, 0.9);
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.5em;
+}
+@media (min-width: 1024px) {
+  #workDisplay #workDisplayContent #workDisplayMiddle pre {
+    font-size: 1.4rem;
+  }
 }
 #workDisplay #workDisplayContent #workDisplayMiddle pre code {
   font-size: inherit;

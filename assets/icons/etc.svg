@@ -1,0 +1,14 @@
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true"
+focusable="false" 
+title="SASS"   
+alt="SASS icon"
+id="sass" 
+class="fa-sass" 
+width="1em"
+height="1em"
+preserveAspectRatio="xMidYMid meet"
+viewBox="0 0 29 29"><path fill="currentColor" d="M14.5 27C7.607 27 2 21.393 2 14.5S7.607 2 14.5 2 27 7.607 27 14.5 21.393 27 14.5 27zm0-23C8.71 4 4 8.71 4 14.5S8.71 25 14.5 25 25 20.29 25 14.5 20.29 4 14.5 4z"/><circle fill="currentColor" cx="14.5" cy="14.5" r="2"/><circle fill="currentColor" cx="8.5" cy="14.5" r="2"/><circle fill="currentColor" cx="20.5" cy="14.5" r="2"/>
+</svg>

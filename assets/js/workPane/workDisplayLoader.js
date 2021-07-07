@@ -1,64 +1,55 @@
 import getProjectData from "./getProjectData.js";
+import selectBuilder from "./selectBuilder.js";
+import fileSelector from "./fileSelector.js";
 
-function optionBuilder([fileTypeName, array]) {
-  const optionsList = array.map((item) => {
-    return `<option value="${item.fileName}">${item.fileName}</option>`;
-  });
-  return `<optgroup label="${fileTypeName}">${optionsList}</optgroup>`;
+function languageIconBuilder([id, filename]) {
+  return `<img
+  src="./assets/icons/${filename}.svg"
+  id="workDisplay${id}"
+  class="svg-injectable"
+  title="${filename}"
+/>`;
 }
 
-function selectBuilder(currentProject) {
-  const htmlProjects = currentProject.filter(
-    (item) => item.fileType === "html"
-  );
-  const scssProjects = currentProject.filter(
-    (item) => item.fileType === "scss"
-  );
-  const jsProjects = currentProject.filter((item) => item.fileType === "js");
-  const jsonProjects = currentProject.filter(
-    (item) => item.fileType === "json"
-  );
-  const etcProjects = currentProject.filter(
-    (item) =>
-      item.fileType !== "html" &&
-      item.fileType !== "scss" &&
-      item.fileType !== "json" &&
-      item.fileType !== "js"
-  );
-  const split = [
-    ["HTML", htmlProjects],
-    ["SASS", scssProjects],
-    ["Javascript", jsProjects],
-    ["ETC...", etcProjects],
-    ["JSON", jsonProjects],
-  ];
-  return split.map((item) => optionBuilder(item)).join("");
+function languageIconChecker(projectData) {
+  const iconArray = [];
+  if (projectData.some((item) => item.fileType === "html"))
+    iconArray.push(["Html", "html5"]);
+  if (projectData.some((item) => item.fileType === "scss"))
+    iconArray.push(["Scss", "sass"]);
+  if (projectData.some((item) => item.fileType === "js"))
+    iconArray.push(["Js", "javascript"]);
+  if (projectData.some((item) => item.fileType === "json"))
+    iconArray.push(["Json", "json4"]);
+  if (projectData.some((item) => item.fileType === "md"))
+    iconArray.push(["Etc", "etc"]);
+  return iconArray.map((pair) => languageIconBuilder(pair));
 }
 
 async function workDisplayLoader(projectName) {
-  const current = await getProjectData(projectName);
-  const projectSelect = await selectBuilder(current);
-  //
-  function fileSelector(event) {
-    const codeDisplay = current.find(
-      (item) => item.fileName === event.target.value
-    );
-    const innerData =
-      codeDisplay.fileType === "html"
-        ? codeDisplay.data.replaceAll("<", "&lt").replaceAll(">", "&gt")
-        : codeDisplay.data;
-    document.getElementById("codeDisplay").classList.remove("prettyprinted");
-    document.getElementById(
-      "codeDisplay"
-    ).innerHTML = `<code>${innerData}</code>`;
+  // clears the filtered project data
+  sessionStorage.removeItem("currentProjectLanguageData");
 
-    // prettify injected code
-    prettyPrint();
-  }
-  document
-    .getElementById("fileSelect")
-    .removeEventListener("input", fileSelector);
+  // gets current projects data and sets it to session storage
+  const currentProjectData = await getProjectData(projectName);
+  await sessionStorage.setItem(
+    "currentProjectData",
+    JSON.stringify(currentProjectData)
+  );
+
+  // inserts the language icons if the language is present in the project
+  document.getElementById("workDisplayTop").innerHTML =
+    await languageIconChecker(currentProjectData).join("");
+
+  // convert img-injectables to svg items
+  await SVGInject(document.querySelectorAll("img.svg-injectable"));
+
+  // builds the project select dropbox with the current project
+  const projectSelect = await selectBuilder(currentProjectData);
+
+  // inserts the current projects data into the dropdown select box
   document.getElementById("fileSelect").innerHTML = projectSelect;
+  fileSelector(null, true);
   document.getElementById("fileSelect").addEventListener("input", fileSelector);
 }
 
