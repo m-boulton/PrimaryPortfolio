@@ -1,6 +1,6 @@
 import contactFormButtons from "./formScripts/contactFormButtons.js";
 import workLoader from "./workPane/workLoader.js";
-import workDisplayClicks from "./workpane/workDisplayClicks.js";
+import workDisplayClicks from "./workPane/workDisplayClicks.js";
 
 // Page load event handlers
 
