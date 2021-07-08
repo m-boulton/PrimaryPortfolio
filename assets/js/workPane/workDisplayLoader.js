@@ -21,7 +21,15 @@ function languageIconChecker(projectData) {
     iconArray.push(["Js", "javascript"]);
   if (projectData.some((item) => item.fileType === "json"))
     iconArray.push(["Json", "json4"]);
-  if (projectData.some((item) => item.fileType === "md"))
+  if (
+    projectData.some(
+      (item) =>
+        item.fileType != "html" ||
+        item.fileType != "scss" ||
+        item.fileType != "js" ||
+        item.fileType != "json"
+    )
+  )
     iconArray.push(["Etc", "etc"]);
   return iconArray.map((pair) => languageIconBuilder(pair));
 }
