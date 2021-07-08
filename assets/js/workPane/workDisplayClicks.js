@@ -3,10 +3,17 @@ import fileSelector from "./fileSelector.js";
 
 function languageFilter(lang) {
   // filters the full project for a specific filetype
-  const filtered = JSON.parse(
-    sessionStorage.getItem("currentProjectData")
-  ).filter((project) => project.fileType === lang);
-
+  let filtered = null;
+  if (Array.isArray(lang)) {
+    filtered = JSON.parse(sessionStorage.getItem("currentProjectData")).filter(
+      (project) => !lang.includes(project.fileType)
+    );
+  }
+  if (typeof lang === "string") {
+    filtered = JSON.parse(sessionStorage.getItem("currentProjectData")).filter(
+      (project) => project.fileType === lang
+    );
+  }
   // stores the specified language files
   sessionStorage.setItem(
     "currentProjectLanguageData",
@@ -61,7 +68,7 @@ function workDisplayClicks() {
       event.target.id === "workDisplayEtc" ||
       event.target.parentElement.id === "workDisplayEtc"
     ) {
-      languageFilter("md");
+      languageFilter(["html", "scss", "js", "json"]);
     }
 
     // closes the code viewer panel for mobile users
