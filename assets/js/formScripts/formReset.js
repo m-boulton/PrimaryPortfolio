@@ -4,6 +4,6 @@ function formReset() {
   document.getElementById("formSubject").value = "";
   document.getElementById("formMessage").value = "";
   document.getElementById("confirmEmailCheckbox").checked = false;
-  document.getElementById("formMessageOutput").textContent = "";
+  document.getElementById("formMessageText").textContent = "";
 }
 export default formReset;

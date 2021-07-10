@@ -6,7 +6,6 @@ function optionBuilder([fileTypeName, array]) {
 }
 
 function selectBuilder(currentProject, language) {
-  console.log(currentProject);
   const projectsArray = [];
   const htmlProjects = currentProject.filter(
     (item) => item.fileType === "html"

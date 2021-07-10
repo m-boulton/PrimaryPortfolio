@@ -20,6 +20,9 @@ if (document.getElementById("buttonInputArea")) {
   document
     .getElementById("buttonInputArea")
     .addEventListener("click", contactFormButtons, false);
+  document
+    .getElementById("queryInputArea")
+    .addEventListener("keypress", contactFormButtons, false);
 }
 
 // Click handlers for code viewer pane

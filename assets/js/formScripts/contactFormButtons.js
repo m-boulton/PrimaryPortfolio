@@ -4,8 +4,9 @@ import formBuilder from "./formBuilder.js";
 import formValidate from "./formValidate.js";
 
 async function contactFormButtons(e) {
+  console.log(e);
   //   click event for submit button
-  if (e.target.id == "submitButton") {
+  if (e.target.id == "submitButton" || e.key === "Enter") {
     let cover = document.getElementById("formMessageCover");
     let message = document.getElementById("formMessageText");
     let button = document.getElementById("formMessageButton");
@@ -42,8 +43,14 @@ async function contactFormButtons(e) {
     message.textContent = formValid;
     button.textContent = "Close";
     cover.style.display = "block";
+    button.focus();
     button.addEventListener("click", () => {
       cover.style.display = "none";
+    });
+    button.addEventListener("keypress", () => {
+      if (e.key === "Enter") {
+        cover.style.display = "none";
+      }
     });
   }
 
