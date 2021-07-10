@@ -4,7 +4,6 @@ import formBuilder from "./formBuilder.js";
 import formValidate from "./formValidate.js";
 
 async function contactFormButtons(e) {
-  console.log(e);
   //   click event for submit button
   if (e.target.id == "submitButton" || e.key === "Enter") {
     let cover = document.getElementById("formMessageCover");
