@@ -53,13 +53,17 @@
       align-items: center;
       justify-content: space-evenly;
       z-index: 5;
-      i {
-        z-index: -5;
-      }
     }
     #workDisplayTop {
       background: rgba(0, 0, 0, 0.9);
       grid-area: top;
+      .svg-injectable {
+        font-size: 3rem;
+        padding: 0.2em;
+      }
+      .language-highlight {
+        animation: blink-color 2s linear infinite;
+      }
     }
     #workDisplayExit {
       grid-area: exit;
@@ -183,3 +187,7 @@
     }
   }
 }
+
+@include background-move;
+@include blink-fill;
+@include blink-color;

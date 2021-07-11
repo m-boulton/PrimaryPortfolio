@@ -103,28 +103,5 @@
   }
 }
 
-@keyframes blink {
-  0% {
-    fill: $accent-off;
-  }
-  33% {
-    fill: $accent;
-  }
-  66% {
-    fill: $aqua;
-  }
-  100% {
-    fill: $accent-off;
-  }
-}
-@keyframes background-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+@include background-move;
+@include blink-fill;

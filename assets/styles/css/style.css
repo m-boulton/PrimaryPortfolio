@@ -734,6 +734,17 @@
   cursor: pointer;
 }
 
+@keyframes background-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes blink {
   0% {
     fill: #5f27cd;
@@ -746,17 +757,6 @@
   }
   100% {
     fill: #5f27cd;
-  }
-}
-@keyframes background-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 #workDisplay {
@@ -815,12 +815,16 @@
   justify-content: space-evenly;
   z-index: 5;
 }
-#workDisplay #workDisplayContent .workDisplay-grid-items i {
-  z-index: -5;
-}
 #workDisplay #workDisplayContent #workDisplayTop {
   background: rgba(0, 0, 0, 0.9);
   grid-area: top;
+}
+#workDisplay #workDisplayContent #workDisplayTop .svg-injectable {
+  font-size: 3rem;
+  padding: 0.2em;
+}
+#workDisplay #workDisplayContent #workDisplayTop .language-highlight {
+  animation: blink-color 2s linear infinite;
 }
 #workDisplay #workDisplayContent #workDisplayExit {
   grid-area: exit;
@@ -951,6 +955,45 @@
   }
 }
 
+@keyframes background-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes blink {
+  0% {
+    fill: #5f27cd;
+  }
+  33% {
+    fill: #0984e3;
+  }
+  66% {
+    fill: #1dd1a1;
+  }
+  100% {
+    fill: #5f27cd;
+  }
+}
+@keyframes blink-color {
+  0% {
+    color: #5f27cd;
+  }
+  33% {
+    color: #0984e3;
+  }
+  66% {
+    color: #1dd1a1;
+  }
+  100% {
+    color: #5f27cd;
+  }
+}
 html {
   font-size: 62.5%;
   background-color: black;

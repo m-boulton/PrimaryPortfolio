@@ -1,4 +1,5 @@
 @forward './components/_colors.scss';
+@use './components/colors' as *;
 
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -18,5 +19,51 @@ $desktop-width: 1024px;
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
+  }
+}
+
+@mixin blink-fill {
+  @keyframes blink {
+    0% {
+      fill: $accent-off;
+    }
+    33% {
+      fill: $accent;
+    }
+    66% {
+      fill: $aqua;
+    }
+    100% {
+      fill: $accent-off;
+    }
+  }
+}
+@mixin blink-color {
+  @keyframes blink-color {
+    0% {
+      color: $accent-off;
+    }
+    33% {
+      color: $accent;
+    }
+    66% {
+      color: $aqua;
+    }
+    100% {
+      color: $accent-off;
+    }
+  }
+}
+@mixin background-move {
+  @keyframes background-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }

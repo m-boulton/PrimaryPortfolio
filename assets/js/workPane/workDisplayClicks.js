@@ -1,6 +1,15 @@
 import selectBuilder from "./selectBuilder.js";
 import fileSelector from "./fileSelector.js";
 
+function languageHighlighter(id) {
+  document.querySelectorAll(".svg-injectable").forEach((item) => {
+    if (item.id === id) {
+      return item.classList.add("language-highlight");
+    }
+    item.classList.remove("language-highlight");
+  });
+}
+
 function languageFilter(lang) {
   // filters the full project for a specific filetype
   let filtered = null;
@@ -34,46 +43,59 @@ function languageFilter(lang) {
 function workDisplayClicks() {
   const codeDisplayParent = document.getElementById("workDisplayContent");
   codeDisplayParent.addEventListener("click", (event) => {
-    if (event.target.parentElement.id === "workDisplayLeft") {
-      console.log("left click");
+    switch (event.target.parentElement.id) {
+      case "workDisplayHtml":
+        languageFilter("html");
+        languageHighlighter("workDisplayHtml");
+        break;
+      case "workDisplayScss":
+        languageFilter("scss");
+        languageHighlighter("workDisplayScss");
+        break;
+      case "workDisplayJs":
+        languageFilter("js");
+        languageHighlighter("workDisplayJs");
+        break;
+      case "workDisplayJson":
+        languageFilter("json");
+        languageHighlighter("workDisplayJson");
+        break;
+      case "workDisplayEtc":
+        languageFilter(["html", "scss", "js", "json"]);
+        languageHighlighter("workDisplayEtc");
+        break;
+      case "workDisplayLeft":
+        console.log("left");
+        break;
+      case "workDisplayRight":
+        console.log("right");
+        break;
+      case "workDisplayExit":
+        document.getElementById("workDisplay").style.display = "none";
+        break;
     }
-    if (event.target.parentElement.id === "workDisplayRight") {
-      console.log("left right");
-    }
-    if (
-      event.target.id === "workDisplayHtml" ||
-      event.target.parentElement.id === "workDisplayHtml"
-    ) {
-      languageFilter("html");
-    }
-    if (
-      event.target.id === "workDisplayScss" ||
-      event.target.parentElement.id === "workDisplayScss"
-    ) {
-      languageFilter("scss");
-    }
-    if (
-      event.target.id === "workDisplayJs" ||
-      event.target.parentElement.id === "workDisplayJs"
-    ) {
-      languageFilter("js");
-    }
-    if (
-      event.target.id === "workDisplayJson" ||
-      event.target.parentElement.id === "workDisplayJson"
-    ) {
-      languageFilter("json");
-    }
-    if (
-      event.target.id === "workDisplayEtc" ||
-      event.target.parentElement.id === "workDisplayEtc"
-    ) {
-      languageFilter(["html", "scss", "js", "json"]);
-    }
-
-    // closes the code viewer panel for mobile users
-    if (event.target.parentElement.id === "workDisplayExit") {
-      document.getElementById("workDisplay").style.display = "none";
+    // FIXME redundancy for event targeting certain elements
+    switch (event.target.id) {
+      case "workDisplayHtml":
+        languageFilter("html");
+        languageHighlighter("workDisplayHtml");
+        break;
+      case "workDisplayScss":
+        languageFilter("scss");
+        languageHighlighter("workDisplayScss");
+        break;
+      case "workDisplayJs":
+        languageFilter("js");
+        languageHighlighter("workDisplayJs");
+        break;
+      case "workDisplayJson":
+        languageFilter("json");
+        languageHighlighter("workDisplayJson");
+        break;
+      case "workDisplayEtc":
+        languageFilter(["html", "scss", "js", "json"]);
+        languageHighlighter("workDisplayEtc");
+        break;
     }
   });
 }
