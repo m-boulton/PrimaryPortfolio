@@ -822,6 +822,10 @@
 #workDisplay #workDisplayContent #workDisplayTop .svg-injectable {
   font-size: 3rem;
   padding: 0.2em;
+  transition: 0.3s ease;
+}
+#workDisplay #workDisplayContent #workDisplayTop .svg-injectable:hover {
+  background: #0984e3;
 }
 #workDisplay #workDisplayContent #workDisplayTop .language-highlight {
   animation: blink-color 2s linear infinite;
@@ -877,10 +881,13 @@
   grid-area: select;
   width: 95%;
   height: 1.5em;
-  background: rgba(45, 52, 54, 0.8);
+  background: linear-gradient(90deg, #1dd1a1, #0984e3, #5f27cd);
+  background-size: 500%;
+  animation: background-move 5s linear infinite;
+  color: white;
+  fill: white;
   border: solid 3px #0a0a0a;
   border-radius: 0.2em;
-  color: #74b9ff;
   font-size: 1.8rem;
   line-height: 1.5em;
 }

@@ -1,4 +1,4 @@
-function fileSelector(event, first) {
+function fileSelector(event, first, index) {
   let current = null;
   if (sessionStorage.getItem("currentProjectLanguageData")) {
     current = JSON.parse(sessionStorage.getItem("currentProjectLanguageData"));
@@ -13,6 +13,9 @@ function fileSelector(event, first) {
     codeDisplay = current.find(
       (item) => item.fileName === document.getElementById("fileSelect").value
     );
+  }
+  if (typeof index === "number") {
+    codeDisplay = current[index];
   }
   const innerData =
     codeDisplay.fileType === "html"

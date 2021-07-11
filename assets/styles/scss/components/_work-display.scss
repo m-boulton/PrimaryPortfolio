@@ -60,6 +60,10 @@
       .svg-injectable {
         font-size: 3rem;
         padding: 0.2em;
+        transition: 0.3s ease;
+        &:hover {
+          background: $accent;
+        }
       }
       .language-highlight {
         animation: blink-color 2s linear infinite;
@@ -113,10 +117,13 @@
         grid-area: select;
         width: 95%;
         height: 1.5em;
-        background: $dark-transp;
+        background: $fade;
+        background-size: 500%;
+        animation: background-move 5s linear infinite;
+        color: white;
+        fill: white;
         border: solid 3px rgba(10, 10, 10, 1);
         border-radius: 0.2em;
-        color: $accent-light;
         font-size: 1.8rem;
         line-height: 1.5em;
         optgroup {

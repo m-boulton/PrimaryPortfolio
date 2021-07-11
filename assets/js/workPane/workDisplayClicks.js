@@ -1,6 +1,33 @@
 import selectBuilder from "./selectBuilder.js";
 import fileSelector from "./fileSelector.js";
 
+function fileCycle(direction) {
+  const fileSelectBox = document.getElementById("fileSelect");
+  let position = fileSelectBox.selectedIndex;
+  const length = fileSelectBox.length - 1;
+  let index;
+
+  // selecting previous file in select box
+  if (direction === "left") {
+    if (position <= 1) {
+      index = length;
+    } else {
+      index = position - 1;
+    }
+  }
+
+  // selecting next file in select box
+  if (direction === "right") {
+    if (position === length) {
+      index = 0;
+    } else {
+      index = position + 1;
+    }
+  }
+  fileSelectBox.selectedIndex = index;
+  fileSelector(null, null, index);
+}
+
 function languageHighlighter(id) {
   document.querySelectorAll(".svg-injectable").forEach((item) => {
     if (item.id === id) {
@@ -65,10 +92,10 @@ function workDisplayClicks() {
         languageHighlighter("workDisplayEtc");
         break;
       case "workDisplayLeft":
-        console.log("left");
+        fileCycle("left");
         break;
       case "workDisplayRight":
-        console.log("right");
+        fileCycle("right");
         break;
       case "workDisplayExit":
         document.getElementById("workDisplay").style.display = "none";
