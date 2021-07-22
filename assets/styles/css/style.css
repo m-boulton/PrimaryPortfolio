@@ -586,7 +586,7 @@
   margin: 1em auto;
   padding: 0.6em;
   font-size: 1.4rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #workCards .work-card p {
@@ -654,8 +654,8 @@
   border: 0.1rem solid rgba(20, 20, 20, 0.9);
   margin: 0.3rem 0;
   cursor: pointer;
-  color: #636e72;
-  fill: #636e72;
+  color: #b2bec3;
+  fill: #b2bec3;
   font-size: 2rem;
 }
 #workSelect .work-button .angle-down {

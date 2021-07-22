@@ -7,6 +7,11 @@ function iconChecker(iconKey) {
       title = "CSS 3";
       break;
 
+    case "cronjob":
+      fileName = "cronjob";
+      title = "Cron Jobs";
+      break;
+
     case "es6":
       fileName = "es6";
       title = "EcmaScript 2015+";

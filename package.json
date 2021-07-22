@@ -8,7 +8,6 @@
     "css",
     "sass",
     "webpack",
-    "jest",
     "dotenv"
   ],
   "description": "Website that displays information about Mboulton.com's developer and also shows their work.",
