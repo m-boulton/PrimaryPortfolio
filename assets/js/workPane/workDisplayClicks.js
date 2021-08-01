@@ -101,7 +101,7 @@ function workDisplayClicks() {
         document.getElementById("workDisplay").style.display = "none";
         break;
     }
-    // FIXME redundancy for event targeting certain elements
+    // redundancy for event targeting certain elements
     switch (event.target.id) {
       case "workDisplayHtml":
         languageFilter("html");
