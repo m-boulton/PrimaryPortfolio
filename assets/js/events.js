@@ -1,31 +1,25 @@
 import contactFormButtons from "./formScripts/contactFormButtons.js";
-import workLoader from "./workPane/workLoader.js";
-import workDisplayClicks from "./workPane/workDisplayClicks.js";
+import workLoader from "./workPanel/workLoader.js";
+import workDisplayClicks from "./workPanel/workDisplayClicks.js";
 
 // Page load event handlers
 
 window.addEventListener("DOMContentLoaded", async () => {
   // sets brightness of the background
   document.getElementById("background").style.filter = "brightness(100%)";
+  // Loads all the scripts associated with the "My Work" page
   if (window.location.pathname.includes("Work")) {
     workLoader();
+    workDisplayClicks();
+  }
+  // Loads all the scripts associated with the contact form if that page is current
+  if (window.location.pathname.includes("contact")) {
+    // adds click event for the buttons in the contact form
+    document
+      .getElementById("buttonInputArea")
+      .addEventListener("click", contactFormButtons, false);
+    document
+      .getElementById("queryInputArea")
+      .addEventListener("keypress", contactFormButtons, false);
   }
 });
-
-// Click handlers
-
-// Click handler for contact form
-if (document.getElementById("buttonInputArea")) {
-  // adds click event for the buttons in the contact form
-  document
-    .getElementById("buttonInputArea")
-    .addEventListener("click", contactFormButtons, false);
-  document
-    .getElementById("queryInputArea")
-    .addEventListener("keypress", contactFormButtons, false);
-}
-
-// Click handlers for code viewer pane
-if (document.querySelector("#workDisplayContent")) {
-  workDisplayClicks();
-}

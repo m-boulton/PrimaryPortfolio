@@ -18,7 +18,7 @@ async function workLoader() {
   // create click events
   workButtonsEvents();
 
-  // add events to buttons created
+  // Click handlers for opening the code viewer panel in Mobile Version
   document.querySelectorAll(".file-code").forEach((item) => {
     item.addEventListener("click", (e) => {
       document.getElementById("workDisplay").style.display = "block";

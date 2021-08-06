@@ -24,6 +24,8 @@ function selectBuilder(currentProject, language) {
       item.fileType !== "json" &&
       item.fileType !== "js"
   );
+
+  // Adds the language array to the project array if it contains data
   if (htmlProjects.length > 0) {
     projectsArray.push(["HTML", htmlProjects]);
   }

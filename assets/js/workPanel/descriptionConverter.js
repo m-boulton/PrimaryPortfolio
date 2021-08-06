@@ -1,3 +1,5 @@
+// Parses the readme file from markdown into HTML that can be inserted into the DOM
+
 function descriptionConverter(markdownText) {
   const htmlText = markdownText
     .replace(/---$/gim, "<hr>")

@@ -7,7 +7,7 @@ function collapse(btn, sibling) {
 }
 
 function workButtonsEvents() {
-  // Get all project button elements
+  // Get all project button elements and filter out the "work-panel" elements
   const buttonParent = document.getElementById("workSelect");
   const buttons = [...buttonParent.children].filter(
     (i) => i.className === "work-button"
@@ -16,6 +16,7 @@ function workButtonsEvents() {
   buttons.forEach((element) => {
     // creating event listeners for all project buttons
     element.addEventListener("click", (e) => {
+      // run this function when any buttons are clicked
       buttons.forEach((btn) => {
         const match = btn === e.currentTarget;
         const sibling = btn.nextElementSibling;
@@ -23,7 +24,7 @@ function workButtonsEvents() {
         // Closes panels that arent being targeted
         if (!match) collapse(btn, sibling);
 
-        // Toggles opening/closing panels being clicked
+        // Toggles opening/closing the panel being clicked
         if (match) {
           // collapses current project panel if it is open
           if (btn.id === "current") return collapse(btn, sibling);

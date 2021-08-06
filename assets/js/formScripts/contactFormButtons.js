@@ -11,7 +11,7 @@ async function contactFormButtons(e) {
     let button = document.getElementById("formMessageButton");
     //   build the form (object)
     let formData = await formBuilder();
-    // check to make sure require fields arent empty (boolean or message)
+    // check to make sure require fields arent empty (returns a boolean or message)
     let formValid = await formValidate(formData);
     // sends form data (object) to be processed to backend and renders message in the form
     if (formValid === true) {

@@ -1,6 +1,7 @@
 import iconBuilder from "./iconBuilder.js";
 import descriptionConverter from "./descriptionConverter.js";
 
+// Takes each project as an object and renders each of them into the DOM as HTML buttons
 function descriptionBuilder(project) {
   return `<button class="work-button">
     <h3 class="work-button-title">${project.name.split("_").join(" ")}</h3>
