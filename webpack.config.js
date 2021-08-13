@@ -4,13 +4,13 @@ const path = require("path");
 //   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  // mode: "development",
   entry: "./assets/js/main.js",
   output: {
     publicPath: '/dist/',
     path: path.resolve(__dirname, "dist"),
     filename: "portfolio_bundle.js",
   },
+  devtool: 'source-map',
   // plugins: [new HtmlWebpackPlugin({ title: "Development" })],
   module: {
     rules: [
